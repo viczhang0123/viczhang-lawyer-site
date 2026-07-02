@@ -211,7 +211,7 @@
 <section id="contact">
   <p class="kicker">Book a Consultation</p>
   <h2 class="sec-title">预约律师咨询</h2>
-  <p class="sec-sub">填写需求，一键复制后通过微信发送给张律师，24小时内回复</p>
+  <p class="sec-sub">填写需求并提交，直接发送至张律师邮箱，24小时内回复</p>
   <div class="form-grid">
     <div class="contact-card">
       <h3>联系方式</h3>
@@ -238,10 +238,10 @@
       <label>案情简述 *</label>
       <textarea id="f-desc" placeholder="请简要描述：纠纷类型或涉及罪名、当前处理阶段、您的主要诉求"></textarea>
       <div class="form-actions">
-        <button class="btn btn-gold" style="border:none;width:100%;margin:0;" onclick="genForm()">生成预约信息并复制</button>
+        <button class="btn btn-gold" style="border:none;width:100%;margin:0;" onclick="genForm()">提交预约</button>
       </div>
       <div id="form-result"></div>
-      <p class="form-note">🔒 信息仅用于生成咨询文本，本页面不上传任何数据 · 复制后请添加微信 19539042084 发送</p>
+      <p class="form-note">🔒 提交的信息将通过表单服务发送至张律师邮箱，仅用于咨询联系 · 涉密细节建议电话沟通</p>
     </div>
   </div>
 </section>
@@ -367,8 +367,15 @@ async function sendAI(){
 }
 renderQuickQs();
 
-/* ===== 预约表单：生成文本并复制 ===== */
-function genForm(){
+/* ================================================================
+   预约表单配置：
+   在 https://web3forms.com 输入您的邮箱，把邮件里收到的
+   Access Key 粘贴到下面的引号中，表单就会直接发送到您邮箱。
+   留空则退回为「生成文本+访客复制」模式。
+   ================================================================ */
+const FORM_CONFIG = { web3formsKey: "4e335f91-b3ce-4d77-9180-c191b60bd8db" };
+
+async function genForm(){
   const name = document.getElementById("f-name").value.trim();
   const phone = document.getElementById("f-phone").value.trim();
   const type = document.getElementById("f-type").value;
@@ -376,6 +383,30 @@ function genForm(){
   if(!name || !phone || !desc){ showToast("请填写姓名、电话和案情简述"); return; }
   const text = "【预约咨询-来自个人网站】\n称呼：" + name + "\n电话：" + phone + "\n业务类型：" + type + "\n案情简述：" + desc;
   const box = document.getElementById("form-result");
+
+  if(FORM_CONFIG.web3formsKey){
+    showToast("正在发送…");
+    try{
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          access_key: FORM_CONFIG.web3formsKey,
+          subject: "网站预约咨询：" + name + "（" + type.slice(0,10) + "）",
+          "称呼": name, "电话": phone, "业务类型": type, "案情简述": desc
+        })
+      });
+      const data = await res.json();
+      if(data.success){
+        box.style.display = "block";
+        box.textContent = "✅ 已发送给张律师，24小时内回复。如需更快联系，请添加微信 19539042084。";
+        showToast("发送成功");
+        return;
+      }
+      throw new Error("发送失败");
+    }catch(e){ /* 发送失败则退回复制模式 */ }
+  }
+
   box.style.display = "block";
   box.textContent = text + "\n\n👆 以上内容已复制，请添加微信 19539042084 粘贴发送给张律师。";
   copyText(text);
@@ -386,4 +417,19 @@ function copyText(t){
   }else{ fallbackCopy(t); }
 }
 function fallbackCopy(t){
-  con
+  const ta = document.createElement("textarea");
+  ta.value = t; document.body.appendChild(ta); ta.select();
+  try{ document.execCommand("copy"); showToast("已复制到剪贴板"); }
+  catch(e){ showToast("复制失败，请手动复制上方文本"); }
+  document.body.removeChild(ta);
+}
+let toastTimer;
+function showToast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>t.classList.remove("show"), 2200);
+}
+</script>
+</body>
+</html>
