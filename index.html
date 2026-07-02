@@ -4,515 +4,401 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>张恒玮律师 | 企业刑事风险防控 · 商事争议 · 劳动用工合规</title>
-<meta name="description" content="张恒玮律师，专注企业与企业家法律风险防控，擅长刑事辩护（取保候审、职务侵占、合同诈骗、虚开、挪用资金、非吸）、复杂商事争议（股权、合同、公司治理、婚姻家事、票据、执行）及劳动用工合规，累计办理民商事诉讼近百件。提供付费电话咨询、企业合规体检服务。">
-<meta name="keywords" content="张恒玮律师,刑事辩护律师,取保候审,职务侵占,合同诈骗,虚开增值税专用发票,挪用资金,非法吸收公众存款,股权纠纷律师,公司治理纠纷,劳动用工合规,企业合规体检,法定代表人解除限高,离婚财产分割律师,票据纠纷,执行案件律师,劳动仲裁,非诉法律顾问">
-<style>
-  :root{
-    --ink:#1d1d1f;
-    --ink-soft:#6e6e73;
-    --accent:#1c2b4a;
-    --accent2:#3a5a8c;
-    --gold:#a9812f;
-    --glass:rgba(255,255,255,0.50);
-    --glass-strong:rgba(255,255,255,0.68);
-    --glass-border:rgba(255,255,255,0.55);
-    --glass-line:rgba(255,255,255,0.35);
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;}
-  body{
-    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
-    color:var(--ink);
-    line-height:1.7;
-    min-height:100vh;
-    background:linear-gradient(180deg,#eef1f5 0%,#e7eaf0 100%);
-    position:relative;
-    overflow-x:hidden;
-  }
-  body::before{
-    content:"";
-    position:fixed;
-    inset:-10%;
-    z-index:-1;
-    background:
-      radial-gradient(circle at 15% 15%, rgba(58,90,140,0.30), transparent 45%),
-      radial-gradient(circle at 85% 5%, rgba(169,129,47,0.22), transparent 45%),
-      radial-gradient(circle at 75% 85%, rgba(28,43,74,0.26), transparent 45%),
-      radial-gradient(circle at 10% 90%, rgba(120,150,200,0.22), transparent 45%);
-    filter:blur(70px);
-  }
-  a{color:var(--accent2);}
-  .wrap{max-width:880px;margin:0 auto;padding:0 20px;}
-
-  .glass{
-    background:var(--glass);
-    -webkit-backdrop-filter:blur(22px) saturate(180%);
-    backdrop-filter:blur(22px) saturate(180%);
-    border:1px solid var(--glass-border);
-    border-radius:24px;
-    box-shadow:0 8px 32px rgba(28,43,74,0.10), inset 0 1px 0 rgba(255,255,255,0.6);
-  }
-
-  nav.tabs{
-    position:sticky;top:14px;z-index:20;
-    margin:14px auto 0;
-    max-width:640px;
-  }
-  nav.tabs .pill{
-    display:flex;gap:6px;justify-content:center;
-    padding:8px;border-radius:999px;
-    overflow-x:auto;
-  }
-  nav.tabs a{
-    white-space:nowrap;
-    color:var(--ink-soft);
-    text-decoration:none;
-    font-size:13.5px;
-    padding:8px 16px;
-    border-radius:999px;
-    transition:all .2s;
-  }
-  nav.tabs a:hover{background:rgba(28,43,74,0.08);color:var(--accent);}
-
-  header.hero{
-    margin:28px auto 0;
-    padding:44px 36px;
-    text-align:center;
-  }
-  .avatar{
-    width:112px;height:112px;border-radius:50%;
-    margin:0 auto 18px;
-    display:flex;align-items:center;justify-content:center;
-    background:linear-gradient(135deg,var(--accent) 0%, var(--accent2) 60%, var(--gold) 130%);
-    color:#fff;font-size:34px;font-weight:600;letter-spacing:1px;
-    border:3px solid rgba(255,255,255,0.7);
-    box-shadow:0 10px 30px rgba(28,43,74,0.25), inset 0 1px 0 rgba(255,255,255,0.4);
-    overflow:hidden;
-  }
-  .avatar img{width:100%;height:100%;object-fit:cover;}
-  header.hero h1{font-size:28px;margin:0 0 6px;letter-spacing:1px;color:var(--accent);}
-  header.hero p.role{margin:0;font-size:15px;color:var(--ink-soft);}
-  header.hero p.tagline{margin:16px auto 0;font-size:14.5px;color:var(--ink-soft);max-width:520px;}
-  .stat-chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px;}
-  .stat-chip{
-    background:var(--glass-strong);
-    border:1px solid var(--glass-line);
-    border-radius:14px;
-    padding:8px 16px;
-    font-size:12.5px;
-    color:var(--accent);
-  }
-  .stat-chip b{display:block;font-size:15px;color:var(--ink);}
-
-  main.wrap{margin-top:26px;}
-  section{margin-bottom:22px;padding:30px 28px;}
-  h2{font-size:18px;margin:0 0 18px;color:var(--accent);letter-spacing:.5px;}
-  h2 .num{color:var(--gold);margin-right:6px;}
-  h3.sub{font-size:14.5px;margin:26px 0 12px;color:var(--ink);font-weight:600;}
-  h3.sub:first-of-type{margin-top:0;}
-
-  .inner-card{
-    background:rgba(255,255,255,0.45);
-    border:1px solid var(--glass-line);
-    border-radius:18px;
-    padding:18px 20px;
-    margin-bottom:14px;
-  }
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  @media (max-width:600px){.grid{grid-template-columns:1fr;} header.hero{padding:36px 22px;} section{padding:24px 18px;}}
-
-  .tag{
-    display:inline-block;
-    background:rgba(28,43,74,0.07);
-    color:var(--accent);
-    font-size:12px;
-    padding:4px 12px;
-    border-radius:999px;
-    margin:2px 4px 2px 0;
-    border:1px solid rgba(28,43,74,0.08);
-  }
-  .case-num{
-    display:inline-flex;align-items:center;justify-content:center;
-    width:26px;height:26px;border-radius:50%;
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
-    color:#fff;font-size:12.5px;font-weight:600;
-    margin-right:10px;flex:none;
-    box-shadow:0 3px 8px rgba(28,43,74,0.3);
-  }
-  .case-item{display:flex;align-items:flex-start;margin-bottom:14px;}
-  .case-item p{margin:0;}
-  .stat{font-weight:700;color:var(--accent);font-size:14.5px;margin:0 0 4px;}
-  .dot{margin:0 0 10px;padding-left:16px;position:relative;color:var(--ink);}
-  .dot::before{content:"·";position:absolute;left:0;color:var(--gold);font-weight:700;}
-
-  details{
-    background:rgba(255,255,255,0.45);
-    border:1px solid var(--glass-line);
-    border-radius:16px;
-    padding:14px 18px;
-    margin-bottom:10px;
-  }
-  details summary{cursor:pointer;font-weight:600;color:var(--ink);font-size:14.5px;}
-  details p{margin:10px 0 0;color:var(--ink-soft);font-size:14px;}
-
-  .contact-box{
-    padding:26px 28px;
-    display:flex;flex-wrap:wrap;gap:18px;
-    align-items:center;justify-content:space-between;
-  }
-  .contact-box .num{font-size:22px;font-weight:700;color:var(--accent);letter-spacing:1px;}
-  .btn{
-    display:inline-block;
-    text-decoration:none;
-    padding:11px 22px;
-    border-radius:999px;
-    font-size:14px;
-    cursor:pointer;
-    border:none;
-    transition:transform .15s;
-  }
-  .btn:hover{transform:translateY(-1px);}
-  .btn.primary{
-    background:linear-gradient(135deg,var(--accent),var(--accent2));
-    color:#fff !important;
-    box-shadow:0 8px 20px rgba(28,43,74,0.30);
-  }
-  .btn.secondary{
-    background:rgba(255,255,255,0.55);
-    color:var(--accent) !important;
-    border:1px solid var(--glass-line);
-  }
-  .note{font-size:12.5px;color:var(--ink-soft);margin-top:8px;}
-  footer{padding:22px 26px;margin:0 auto 50px;}
-  footer p{font-size:12px;color:var(--ink-soft);margin:0;}
-
-  .toast{
-    position:fixed;bottom:24px;left:50%;transform:translateX(-50%);
-    background:var(--accent);color:#fff;padding:9px 20px;border-radius:999px;
-    font-size:13px;opacity:0;transition:opacity .25s;pointer-events:none;
-    box-shadow:0 8px 20px rgba(28,43,74,0.3);
-  }
-  .toast.show{opacity:1;}
-</style>
-
-<!-- 结构化数据：便于AI/搜索引擎识别人物、服务与常见问题 -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "name": "张恒玮",
-      "jobTitle": "律师",
-      "description": "专注企业与企业家法律风险防控，擅长刑事辩护、复杂商事争议与劳动用工合规，行业从业4年。",
-      "knowsAbout": [
-        "刑事辩护", "取保候审", "职务侵占", "合同诈骗", "虚开增值税专用发票",
-        "挪用资金", "非法吸收公众存款", "股权纠纷", "合同纠纷", "公司治理纠纷",
-        "股东损害公司债权人利益纠纷", "婚姻家事纠纷", "夫妻共同财产分割", "票据纠纷",
-        "执行案件", "民间借贷纠纷", "合伙合同纠纷", "继承纠纷", "建设工程施工合同纠纷",
-        "商品房买卖合同纠纷", "劳动用工合规", "劳动仲裁", "工伤保险待遇纠纷",
-        "企业合规体检", "非诉法律顾问"
-      ],
-      "telephone": "+86-19539042084",
-      "areaServed": "CN"
-    },
-    {
-      "@type": "LegalService",
-      "name": "张恒玮律师法律服务",
-      "serviceType": ["付费电话咨询", "企业合规体检", "刑事辩护", "商事争议代理", "婚姻家事纠纷代理", "执行案件代理", "非诉法律顾问服务"],
-      "provider": {"@type": "Person", "name": "张恒玮"},
-      "areaServed": "CN",
-      "telephone": "+86-19539042084"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "企业涉嫌虚开增值税专用发票，应该怎么应对？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "虚开类案件需第一时间核实票据流向、资金流向与货物（劳务）真实交易情况，尽早委托辩护律师介入侦查阶段，争取取保候审并就主观故意、税款损失等关键事实进行辩护。具体方案需结合案件证据材料判断，建议尽早咨询。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "公司法定代表人被限制高消费（限高），如何解除？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "可通过变更/涤除法定代表人登记、协调执行案件履行或和解、向法院申请解除限制消费令等途径处理，需结合具体执行案件情况制定方案。张恒玮律师曾协助多家企业完成法定代表人涤除，帮助原法定代表人解除限高措施。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "涉嫌非法吸收公众存款罪（非吸），能否申请取保候审？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "能否取保候审需结合涉案金额、是否退赔、社会危害性及是否存在自首立功等情节综合判断。建议在侦查阶段尽早委托律师介入，及时提交取保候审申请并配合退赔工作。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "企业合规体检具体包含哪些内容？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "企业合规体检一般包括公司治理结构、合同管理、用工合规、财税合规、刑事风险点排查等方面的系统梳理，出具风险清单与整改建议，帮助企业与企业家提前防控法律风险。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "离婚时夫妻共同财产数额较大，应该如何处理？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "建议先对房产、股权、存款等共同财产进行全面梳理和清单化，明确财产性质与价值，再通过协商或调解方式确定分割方案；涉及金额较大或财产构成复杂的，建议尽早委托律师介入梳理与谈判。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "票据追索权已经超过法定追索期限，还能追回票据款项吗？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "直接行使票据追索权可能因超期受限，但仍可结合票据基础法律关系，通过普通债权债务关系、不当得利等其他民事法律途径追讨，具体可行性需结合证据材料判断。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "执行阶段发现被执行人名下无财产，能否查找其配偶名下财产？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "若相关财产属于夫妻共同财产，可在执行程序中申请查控被执行人配偶名下的财产，必要时提起婚内共同财产分割诉讼，推动财产处置变现以保障债权实现。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "如何联系张恒玮律师进行咨询？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "可通过电话/微信 19539042084 联系，提供付费电话咨询与企业合规体检服务，建议联系前简要整理诉求与关键事实，以提高咨询效率。"
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
+<meta name="description" content="张恒玮律师，专注企业与企业家法律风险防控：刑事辩护（取保候审、职务侵占、合同诈骗、虚开、非吸）、复杂商事争议（股权、公司治理、婚姻家事、票据、执行）及劳动用工合规。付费电话咨询、企业合规体检、AI在线初步咨询。">
+<meta name="keywords" content="张恒玮律师,刑事辩护律师,取保候审,职务侵占,合同诈骗,虚开增值税专用发票,非法吸收公众存款,股权纠纷律师,公司治理纠纷,劳动用工合规,企业合规体检,劳动仲裁,唯案唯客">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
 
-<nav class="tabs">
-  <div class="glass pill">
-    <a href="#about">简介</a>
-    <a href="#services">服务</a>
-    <a href="#cases">案例</a>
-    <a href="#faq">问题</a>
-    <a href="#contact">联系</a>
+<!-- 资讯滚动条：内容请定期手动更新 -->
+<div class="ticker">
+  <div class="ticker-track">
+    2026.7.2 ｜ <b>张恒玮律师提示：</b>企业负责人被采取强制措施后的"黄金37天"，尽早委托律师介入是争取取保候审的关键窗口 ｜ 职务侵占、挪用资金类案件立案与合规整改并行，企业内控排查宜早不宜迟 ｜ 劳动用工合规新趋势：被迫离职与违法解除争议高发，用工制度体检需求上升 ｜ 公众号<b>「唯案唯客」</b>每周更新办案实务文章，欢迎关注
+  </div>
+</div>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="seal">张</span>
+      <span class="name">张恒玮律师<small>WEIANWEIKE · 唯案唯客</small></span>
+    </a>
+    <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+    <div class="nav-links" id="navlinks">
+      <a href="#about">关于我</a>
+      <a href="criminal.html">刑事辩护</a>
+      <a href="commercial.html">商事争议</a>
+      <a href="labor.html">劳动合规</a>
+      <a href="articles.html">公众号文章</a>
+      <a href="#ai-consult">AI咨询</a>
+      <a class="cta" href="#contact">预约咨询</a>
+    </div>
   </div>
 </nav>
 
-<div class="wrap">
-  <header class="hero glass">
-    <div class="avatar" id="avatarBox"><img src="avatar.png" alt="张恒玮律师"></div>
-    <h1>张恒玮 律师</h1>
-    <p class="role">企业与企业家法律风险防控 · 刑事辩护 · 商事争议 · 劳动用工合规</p>
-    <p class="tagline">行业从业4年，专注于为企业与企业家提供刑事风险防控、复杂商事争议解决及用工合规服务，提供付费电话咨询与企业合规体检。</p>
-    <div class="stat-chips">
-      <div class="stat-chip"><b>4年</b>行业经验</div>
-      <div class="stat-chip"><b>近百件</b>民商事诉讼</div>
-      <div class="stat-chip"><b>10余件</b>刑事诉讼</div>
-      <div class="stat-chip"><b>数十件</b>劳动仲裁</div>
+<header class="hero">
+  <div class="hero-inner">
+    <span class="badge">企业与企业家法律风险防控</span>
+    <h1>把风险挡在<span class="gold">立案之前</span>，<br>把权益争在<span class="gold">程序之中</span></h1>
+    <p class="sub">专注<b>刑事辩护 · 复杂商事争议 · 劳动用工合规</b>三大方向，为企业与企业家提供付费电话咨询与企业合规体检，用可执行的方案回应每一个法律问题。</p>
+    <a class="btn btn-gold" href="#ai-consult">免费AI初步咨询</a>
+    <a class="btn btn-ghost" href="#contact">预约律师咨询</a>
+    <div class="stats">
+      <div class="stat"><b>4年</b><span>行业经验</span></div>
+      <div class="stat"><b>近百件</b><span>民商事诉讼</span></div>
+      <div class="stat"><b>10余件</b><span>刑事诉讼</span></div>
+      <div class="stat"><b>数十件</b><span>劳动仲裁</span></div>
     </div>
-  </header>
+  </div>
+</header>
+
+<section id="about">
+  <p class="kicker">About the Lawyer</p>
+  <h2 class="sec-title">张恒玮 律师</h2>
+  <p class="sec-sub">企业与企业家法律风险防控 · 刑事辩护 · 商事争议 · 劳动用工合规</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>张恒玮，执业律师，行业从业4年，专注于<b>企业与企业家</b>相关的法律风险防控，覆盖<b>刑事辩护、复杂商事争议与劳动用工合规</b>三大方向。</p>
+      <p>刑事方向擅长取保候审、职务侵占、合同诈骗、虚开增值税专用发票、挪用资金、非法吸收公众存款等罪名的辩护与风险防控；商事方向深耕股权纠纷、合同纠纷、公司治理纠纷、股东损害债权人利益纠纷，兼及婚姻家事、票据与执行案件；同时为企业提供劳动用工合规、劳动仲裁代理、企业合规体检与非诉法律顾问服务。</p>
+      <p>累计办理民商事诉讼<b>近百件</b>、劳动仲裁<b>数十件</b>、刑事诉讼<b>10余件</b>，并在多起案件中协助主办律师深度参与侦查、审查起诉及审判阶段工作。</p>
+      <div class="quote">「不只是告诉客户"不能做什么"，更帮助客户知道"怎么做才安全"——把复杂的法律问题转化为可执行的解决方案。」</div>
+      <div style="margin-top:20px;">
+        <span class="tag">取保候审</span><span class="tag">职务侵占</span><span class="tag">合同诈骗</span><span class="tag">虚开</span><span class="tag">非吸</span><span class="tag">股权纠纷</span><span class="tag">公司治理</span><span class="tag">票据/执行</span><span class="tag">婚姻家事</span><span class="tag">劳动仲裁</span><span class="tag">合规体检</span>
+      </div>
+    </div>
+    <div class="cred-card">
+      <img class="cred-photo" src="images/avatar.png" alt="张恒玮律师">
+      <div class="cred-name"><b>张 恒 玮</b><span>Zhang Hengwei · Attorney at Law</span></div>
+      <h3>执业信息</h3>
+      <ul>
+        <li>执业律师 · 行业从业4年</li>
+        <li>执业证号：14419202510902678</li>
+        <li>专注企业与企业家法律风险防控</li>
+        <li>微信公众号「唯案唯客」主理人</li>
+      </ul>
+      <div class="contact-mini">
+        电话 / 微信（点击拨号）<br>
+        <a href="tel:19539042084"><b>195 3904 2084</b></a><br>
+        <span style="font-size:12.5px;opacity:.8;">建议提前梳理关键事实，提高咨询效率</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <p class="kicker">Core Practice Areas</p>
+  <h2 class="sec-title">三大核心业务</h2>
+  <p class="sec-sub">每个方向均有独立详细专页，含相关代表案例与常见问题解答</p>
+  <div class="svc-grid">
+    <a class="svc-card" href="criminal.html">
+      <div class="en">Criminal Defense</div>
+      <h3>刑事辩护</h3>
+      <p>企业与企业家刑事风险防控、强制措施应对、取保候审申请、无罪与罪轻辩护，覆盖侦查、审查起诉、审判全流程。</p>
+      <div class="tags"><span class="tag">取保候审</span><span class="tag">职务侵占</span><span class="tag">合同诈骗</span><span class="tag">虚开</span><span class="tag">挪用资金</span><span class="tag">非吸</span></div>
+      <span class="more">查看刑事辩护详情</span>
+    </a>
+    <a class="svc-card" href="commercial.html">
+      <div class="en">Commercial Disputes</div>
+      <h3>商事争议解决</h3>
+      <p>股权与公司治理纠纷、各类合同纠纷、婚姻家事财产分割、票据纠纷与执行案件，近百件民商事诉讼办案经验。</p>
+      <div class="tags"><span class="tag">股权纠纷</span><span class="tag">公司治理</span><span class="tag">合同纠纷</span><span class="tag">财产分割</span><span class="tag">票据</span><span class="tag">执行</span></div>
+      <span class="more">查看商事争议详情</span>
+    </a>
+    <a class="svc-card" href="labor.html">
+      <div class="en">Labor & Compliance</div>
+      <h3>劳动用工合规</h3>
+      <p>劳动用工制度体检、劳动仲裁代理、企业合规体检与非诉法律顾问，把用工风险与刑事风险点排查在争议发生之前。</p>
+      <div class="tags"><span class="tag">用工合规</span><span class="tag">劳动仲裁</span><span class="tag">合规体检</span><span class="tag">非诉顾问</span></div>
+      <span class="more">查看劳动合规详情</span>
+    </a>
+  </div>
+</section>
+
+<section id="products">
+  <p class="kicker">Service Products</p>
+  <h2 class="sec-title">服务方式</h2>
+  <p class="sec-sub"></p>
+  <div class="duo">
+    <div class="duo-card">
+      <h3>💬 付费电话咨询</h3>
+      <p>就刑事案件应对、商事纠纷处理、用工合规等问题提供针对性解答。建议提前梳理关键事实（涉及罪名/纠纷类型、当前处理阶段），提高咨询效率。</p>
+    </div>
+    <div class="duo-card">
+      <h3>🩺 企业合规体检</h3>
+      <p>对企业治理结构、合同管理、用工与刑事风险点进行系统排查，出具风险清单与整改建议，帮助企业把问题解决在立案之前。</p>
+    </div>
+  </div>
+</section>
+
+<section id="cases">
+  <p class="kicker">Selected Cases</p>
+  <h2 class="sec-title">代表案例</h2>
+  <p class="sec-sub">已作简化与脱敏处理，不涉及当事人身份信息</p>
+  <div class="case-grid">
+    <div class="case-card">
+      <div class="case-num">01</div>
+      <h3>25家分公司负责人登记涤除 + 解除限高</h3>
+      <p>代理请求变更公司登记纠纷，处理客户在某公司体系深圳、广州子公司名下共25家分公司的负责人登记问题，全程跟进诉讼及强制执行，完成身份涤除并协助解除限制高消费措施。</p>
+    </div>
+    <div class="case-card">
+      <div class="case-num">02</div>
+      <h3>千万级夫妻共同财产离婚案 60日调解结案</h3>
+      <p>协助客户全面梳理共同财产构成及分割方案，在承办法官确定后60日内促成双方达成调解，案件顺利结案。</p>
+    </div>
+    <div class="case-card">
+      <div class="case-num">03</div>
+      <h3>超追索期票据款近百万元成功追回</h3>
+      <p>票据追索权已超法定追索期限的情况下，通过其他法律途径协助客户追回票据购买款近百万元。</p>
+    </div>
+    <div class="case-card">
+      <div class="case-num">04</div>
+      <h3>执行阶段查控配偶名下婚内共同财产</h3>
+      <p>协助申请人在执行阶段查找、控制被执行人配偶名下婚内共同财产，并提起婚内共同财产分割诉讼，推动财产处置变现。</p>
+    </div>
+    <div class="case-card">
+      <div class="case-num">05</div>
+      <h3>刑附民精神损害赔偿认定获突破</h3>
+      <p>推动承办法院在刑事附带民事诉讼程序中采纳并支持精神损害鉴定意见，促成精神损害赔偿认定在该类案件中的突破。</p>
+    </div>
+    <div class="case-card">
+      <div class="case-num">06</div>
+      <h3>介入11天推动公安机关作出释放决定</h3>
+      <p>在一起涉嫌介绍卖淫案件中，介入后11天内成功推动公安机关对当事人作出释放决定。</p>
+    </div>
+  </div>
+  <p class="case-note">案件结果与具体事实、证据情况密切相关，仅供参考，不代表对未来案件结果的承诺或保证。</p>
+</section>
+
+<section id="ai-consult">
+  <p class="kicker">AI-Powered Legal Assistant</p>
+  <h2 class="sec-title">先问AI，再找律师</h2>
+  <p class="sec-sub">选择业务类型，获得针对性初步法律分析。复杂案件由张恒玮律师亲自跟进。</p>
+  <div class="ai-wrap">
+    <div class="ai-head">
+      <h3>AI 法律咨询助手 <span>7×24h</span></h3>
+      <p>即时初步解答，大幅降低初次咨询门槛。AI回复仅供参考，正式意见请预约律师。</p>
+    </div>
+    <div class="ai-types">
+      <button class="ai-type active" data-type="刑事辩护" onclick="setType(this)">刑事辩护</button>
+      <button class="ai-type" data-type="商事争议" onclick="setType(this)">商事争议</button>
+      <button class="ai-type" data-type="劳动用工" onclick="setType(this)">劳动用工</button>
+    </div>
+    <div class="ai-box">
+      <div id="ai-msgs">
+        <div class="msg ai">您好！我是张恒玮律师的AI法律助手。请选择上方咨询类型，简要描述您的问题（如涉及罪名/纠纷类型、当前处理阶段），我将提供初步分析。</div>
+      </div>
+      <div class="quick-qs" id="quick-qs"></div>
+      <div class="ai-input-row">
+        <input id="ai-input" type="text" placeholder="请输入您的法律问题…" onkeydown="if(event.key==='Enter')sendAI()">
+        <button id="ai-send" onclick="sendAI()">发送</button>
+      </div>
+    </div>
+    <p class="ai-disclaimer">AI回复仅供参考，不构成正式法律意见 · 复杂问题请拨打 195 3904 2084 预约深度咨询</p>
+  </div>
+</section>
+
+<section id="articles">
+  <p class="kicker">WeChat Articles</p>
+  <h2 class="sec-title">公众号文章</h2>
+  <p class="sec-sub">微信公众号「唯案唯客」· 办案实务与法律观察 · 点击标题跳转原文</p>
+  <div class="article-list">
+    <a class="article-item" href="https://mp.weixin.qq.com/s/H3cDIDJFfHVAKu7eXjAkog" target="_blank" rel="noopener">
+      <div><h3>立案时程序走不完，放人时程序快不起来——最近办案的两件事</h3><p>办案手记 · 程序正义的两副面孔</p></div>
+      <span class="article-date">2026-07-02</span>
+    </a>
+    <a class="article-item" href="https://mp.weixin.qq.com/s/CNHx8g3FPg1P1eJfmR0Jrg" target="_blank" rel="noopener">
+      <div><h3>公司是你的，公司的钱却不是你的。聊一聊职务侵占那些事儿</h3><p>企业家刑事风险 · 职务侵占罪解析</p></div>
+      <span class="article-date">2026-07-01</span>
+    </a>
+    <a class="article-item" href="http://mp.weixin.qq.com/s?__biz=MzkzNjkwMzIwNg==&amp;mid=2247483764&amp;idx=1&amp;sn=5a2a7223988a0754b2916ac80ef89aa0&amp;chksm=c34f0a0c6b9d6fc937a2a2b09ce794bdb9e40e5232e89cd784f177636fb25150122944f98cd6#rd" target="_blank" rel="noopener">
+      <div><h3>老板被刑事拘留后，怎么争取取保候审？</h3><p>刑事实务 · 黄金37天应对指南</p></div>
+      <span class="article-date">2026-06-29</span>
+    </a>
+    <a class="article-item" href="https://mp.weixin.qq.com/s/mubYcogfUKZj7Xd_XKchAQ" target="_blank" rel="noopener">
+      <div><h3>刑事谅解谈判 操作自查清单</h3><p>刑事实务 · 谅解谈判要点与操作清单</p></div>
+      <span class="article-date">2026-06-25</span>
+    </a>
+  </div>
+  <div class="wechat-banner">
+    <div><b>微信公众号：唯案唯客</b><br><span>持续更新办案实务文章 · 微信搜索「唯案唯客」关注（此处可替换为公众号二维码）</span></div>
+    <a class="btn btn-gold" style="margin:0;" href="articles.html">查看全部文章</a>
+  </div>
+</section>
+
+<section id="contact">
+  <p class="kicker">Book a Consultation</p>
+  <h2 class="sec-title">预约律师咨询</h2>
+  <p class="sec-sub">填写需求，一键复制后通过微信发送给张律师，24小时内回复</p>
+  <div class="form-grid">
+    <div class="contact-card">
+      <h3>联系方式</h3>
+      <div class="row"><b>电话 / 微信</b><a href="tel:19539042084" class="big">195 3904 2084</a></div>
+      <div class="row"><b>微信公众号</b>唯案唯客</div>
+      <div class="row"><b>服务方式</b>付费电话咨询 · 企业合规体检 · 案件代理</div>
+      <div class="row"><b>响应时效</b>24小时内回复 · AI助手 7×24 在线</div>
+      <div class="row" style="font-size:13px;opacity:.85;">建议联系前简要整理诉求与关键事实（如涉及罪名/纠纷类型、当前处理阶段），以提高咨询效率。</div>
+    </div>
+    <div class="form-card">
+      <label>姓名 / 称呼 *</label>
+      <input id="f-name" type="text" placeholder="如何称呼您">
+      <label>联系电话 *</label>
+      <input id="f-phone" type="tel" placeholder="方便回访的手机号">
+      <label>业务类型 *</label>
+      <select id="f-type">
+        <option>刑事辩护（取保候审 / 职务侵占 / 合同诈骗 / 虚开 / 非吸等）</option>
+        <option>商事争议（股权 / 合同 / 公司治理 / 票据 / 执行）</option>
+        <option>婚姻家事（离婚财产分割 / 析产）</option>
+        <option>劳动用工（仲裁 / 用工合规）</option>
+        <option>企业合规体检 / 法律顾问</option>
+        <option>其他</option>
+      </select>
+      <label>案情简述 *</label>
+      <textarea id="f-desc" placeholder="请简要描述：纠纷类型或涉及罪名、当前处理阶段、您的主要诉求"></textarea>
+      <div class="form-actions">
+        <button class="btn btn-gold" style="border:none;width:100%;margin:0;" onclick="genForm()">生成预约信息并复制</button>
+      </div>
+      <div id="form-result"></div>
+      <p class="form-note">🔒 信息仅用于生成咨询文本，本页面不上传任何数据 · 复制后请添加微信 19539042084 发送</p>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <h4>张恒玮律师 · 唯案唯客</h4>
+      <p>企业与企业家法律风险防控 · 刑事辩护 · 商事争议 · 劳动用工合规。本站为个人执业展示与法律知识分享，内容仅供参考，不构成正式法律意见，亦不对具体案件结果作出承诺或保证。</p>
+    </div>
+    <div>
+      <h4>快速入口</h4>
+      <a href="criminal.html">刑事辩护</a>
+      <a href="commercial.html">商事争议</a>
+      <a href="labor.html">劳动用工合规</a>
+      <a href="articles.html">公众号文章</a>
+      <a href="#ai-consult">AI法律咨询</a>
+    </div>
+    <div>
+      <h4>联系方式</h4>
+      <a href="tel:19539042084">📱 195 3904 2084</a>
+      <p>💬 微信同号</p>
+      <p>📰 公众号：唯案唯客</p>
+    </div>
+  </div>
+  <div class="footer-bar">© 2026 张恒玮律师个人网站 · 内容仅供参考，不构成法律意见</div>
 </div>
 
-<main class="wrap">
-
-  <section id="about" class="glass">
-    <h2><span class="num">01</span>个人简介与专长</h2>
-    <div class="inner-card">
-      <p style="margin:0;">张恒玮，执业律师，行业从业4年，专注于<strong>企业与企业家</strong>相关的法律风险防控，覆盖刑事辩护、复杂商事争议与劳动用工合规三大方向。</p>
-    </div>
-    <div class="grid">
-      <div class="inner-card">
-        <p style="margin:0 0 8px;font-weight:600;color:var(--ink);">刑事辩护</p>
-        <span class="tag">取保候审</span><span class="tag">职务侵占</span><span class="tag">合同诈骗</span>
-        <span class="tag">虚开</span><span class="tag">挪用资金</span><span class="tag">非法吸收公众存款</span>
-      </div>
-      <div class="inner-card">
-        <p style="margin:0 0 8px;font-weight:600;color:var(--ink);">商事与公司类争议</p>
-        <span class="tag">股权纠纷</span><span class="tag">合同纠纷</span><span class="tag">公司治理纠纷</span>
-        <span class="tag">股东损害债权人利益纠纷</span>
-      </div>
-      <div class="inner-card">
-        <p style="margin:0 0 8px;font-weight:600;color:var(--ink);">婚姻家事 / 执行</p>
-        <span class="tag">婚姻家事纠纷</span><span class="tag">夫妻共同财产分割</span><span class="tag">票据纠纷</span>
-        <span class="tag">执行案件</span>
-      </div>
-      <div class="inner-card">
-        <p style="margin:0 0 8px;font-weight:600;color:var(--ink);">用工合规 / 法律顾问</p>
-        <span class="tag">劳动用工合规</span><span class="tag">劳动仲裁</span><span class="tag">企业合规体检</span>
-        <span class="tag">非诉法律顾问</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="services" class="glass">
-    <h2><span class="num">02</span>服务项目</h2>
-    <div class="grid">
-      <div class="inner-card">
-        <p style="margin:0 0 6px;font-weight:600;">付费电话咨询</p>
-        <p style="margin:0;color:var(--ink-soft);font-size:14px;">就刑事案件应对、商事纠纷处理、用工合规等问题提供针对性解答，建议提前梳理关键事实，提高咨询效率。</p>
-      </div>
-      <div class="inner-card">
-        <p style="margin:0 0 6px;font-weight:600;">企业合规体检</p>
-        <p style="margin:0;color:var(--ink-soft);font-size:14px;">对企业治理结构、合同管理、用工与刑事风险点进行系统排查，出具风险清单与整改建议。</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="cases" class="glass">
-    <h2><span class="num">03</span>经历与代表案例</h2>
-
-    <h3 class="sub">代表性案例</h3>
-    <div class="inner-card">
-      <div class="case-item">
-        <span class="case-num">1</span>
-        <p>代理一起请求变更公司登记纠纷案件，协助客户处理其在某公司体系深圳、广州子公司名下共25家分公司的负责人登记问题，全程跟进诉讼及强制执行程序，最终完成相关负责人身份的涤除，并协助客户解除被限制高消费措施。</p>
-      </div>
-      <div class="case-item">
-        <span class="case-num">2</span>
-        <p>代理一起夫妻共同财产规模达千万级的离婚案件，协助客户全面梳理共同财产构成及分割方案，在承办法官确定后60日内促成双方达成调解，案件顺利结案。</p>
-      </div>
-      <div class="case-item">
-        <span class="case-num">3</span>
-        <p>代理客户处理与某公司之间的票据纠纷，在票据追索权已超过法定追索期限的情况下，通过其他法律途径协助客户追回票据购买款近百万元。</p>
-      </div>
-      <div class="case-item">
-        <span class="case-num">4</span>
-        <p>在一起执行案件中，协助申请人在执行阶段查找、控制被执行人配偶名下的婚内共同财产，并据此提起婚内共同财产分割诉讼，推动相关财产的处置变现。</p>
-      </div>
-      <div class="case-item">
-        <span class="case-num">5</span>
-        <p>在一起刑事案件中，推动承办法院在刑事附带民事诉讼程序中采纳并支持精神损害鉴定意见，促成精神损害赔偿认定在该类案件中的突破。</p>
-      </div>
-      <div class="case-item">
-        <span class="case-num">6</span>
-        <p>在一起涉嫌介绍卖淫案件中，介入后11天内成功推动公安机关对当事人作出释放决定。</p>
-      </div>
-      <p class="note">以上为既往典型案例，已作简化与脱敏处理，不涉及当事人身份信息。案件结果与具体事实、证据情况密切相关，仅供参考，不代表对未来案件结果的承诺或保证。</p>
-    </div>
-
-    <h3 class="sub">诉讼 / 仲裁办案经验</h3>
-    <div class="grid">
-      <div class="inner-card">
-        <p class="stat">民商事诉讼 · 近百件</p>
-        <p style="margin:0 0 8px;color:var(--ink-soft);font-size:13.5px;">案件类型涵盖：</p>
-        <span class="tag">涉港人员继承纠纷</span><span class="tag">商事合同纠纷</span><span class="tag">买卖合同纠纷</span>
-        <span class="tag">民间借贷纠纷</span><span class="tag">合伙合同纠纷</span><span class="tag">请求变更公司登记纠纷</span>
-        <span class="tag">婚姻家事案件</span><span class="tag">建设工程施工合同纠纷</span><span class="tag">商品房买卖合同纠纷</span>
-        <span class="tag">析产诉讼</span><span class="tag">股东损害公司债权人利益纠纷</span>
-      </div>
-      <div class="inner-card">
-        <p class="stat">劳动仲裁 · 数十件</p>
-        <p style="margin:0 0 8px;color:var(--ink-soft);font-size:13.5px;">案件类型涵盖：</p>
-        <span class="tag">工伤保险待遇纠纷</span><span class="tag">被迫离职</span><span class="tag">违法解除劳动合同</span>
-        <span class="tag">职业病类案件</span>
-      </div>
-      <div class="inner-card">
-        <p class="stat">刑事诉讼 · 10余件</p>
-        <p style="margin:0 0 8px;color:var(--ink-soft);font-size:13.5px;">罪名涵盖：</p>
-        <span class="tag">盗窃罪</span><span class="tag">诈骗罪</span><span class="tag">帮助信息网络犯罪活动罪</span>
-        <span class="tag">强奸罪</span><span class="tag">容留/介绍卖淫罪</span><span class="tag">危险驾驶罪</span>
-        <span class="tag">偷越国（边）境罪</span>
-        <p style="margin:10px 0 0;color:var(--ink-soft);font-size:13.5px;">并在多起案件中协助主办律师深度参与侦查、审查起诉及审判阶段的工作。</p>
-      </div>
-    </div>
-
-    <h3 class="sub">非诉法律服务经验</h3>
-    <div class="inner-card">
-      <p class="dot">为顾问单位审查拟签订合同，就合同条款的合法性出具审查意见，提前防范履约风险。</p>
-      <p class="dot" style="margin-bottom:0;">参加顾问单位内部决策会议，对相关经营决策进行法律风险分析，为决策提供合规支持。</p>
-    </div>
-  </section>
-
-  <section id="faq" class="glass">
-    <h2><span class="num">04</span>常见问题</h2>
-
-    <details>
-      <summary>企业涉嫌虚开增值税专用发票，应该怎么应对？</summary>
-      <p>需第一时间核实票据流向、资金流向与货物（劳务）真实交易情况，尽早委托辩护律师介入侦查阶段，争取取保候审并就主观故意、税款损失等关键事实进行辩护。具体方案需结合案件证据材料判断。</p>
-    </details>
-
-    <details>
-      <summary>公司法定代表人被限制高消费（限高），如何解除？</summary>
-      <p>可通过变更/涤除法定代表人登记、协调执行案件履行或和解、向法院申请解除限制消费令等途径处理，需结合具体执行案件情况制定方案。</p>
-    </details>
-
-    <details>
-      <summary>涉嫌非法吸收公众存款罪（非吸），能否申请取保候审？</summary>
-      <p>能否取保候审需结合涉案金额、是否退赔、社会危害性及是否存在自首立功等情节综合判断，建议尽早委托律师介入并配合退赔工作。</p>
-    </details>
-
-    <details>
-      <summary>企业合规体检具体包含哪些内容？</summary>
-      <p>一般包括公司治理结构、合同管理、用工合规、财税合规、刑事风险点排查等方面的系统梳理，出具风险清单与整改建议。</p>
-    </details>
-
-    <details>
-      <summary>离婚时夫妻共同财产数额较大，应该如何处理？</summary>
-      <p>建议先对房产、股权、存款等共同财产进行全面梳理和清单化，明确财产性质与价值，再通过协商或调解方式确定分割方案；涉及金额较大或财产构成复杂的，建议尽早委托律师介入梳理与谈判。</p>
-    </details>
-
-    <details>
-      <summary>票据追索权已经超过法定追索期限，还能追回票据款项吗？</summary>
-      <p>直接行使票据追索权可能因超期受限，但仍可结合票据基础法律关系，通过普通债权债务关系、不当得利等其他民事法律途径追讨，具体可行性需结合证据材料判断。</p>
-    </details>
-
-    <details>
-      <summary>执行阶段发现被执行人名下无财产，能否查找其配偶名下财产？</summary>
-      <p>若相关财产属于夫妻共同财产，可在执行程序中申请查控被执行人配偶名下的财产，必要时提起婚内共同财产分割诉讼，推动财产处置变现以保障债权实现。</p>
-    </details>
-  </section>
-
-  <section id="contact" class="glass">
-    <h2><span class="num">05</span>联系方式</h2>
-    <div class="inner-card contact-box">
-      <div>
-        <p style="margin:0 0 4px;color:var(--ink-soft);font-size:13px;">电话 / 微信</p>
-        <p class="num">195 3904 2084</p>
-      </div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap;">
-        <a class="btn primary" href="tel:19539042084">拨打电话</a>
-        <button class="btn secondary" onclick="copyWx()">复制微信号</button>
-      </div>
-    </div>
-    <p class="note">建议联系前简要整理诉求与关键事实（如涉及罪名/纠纷类型、当前处理阶段），以提高咨询效率。</p>
-  </section>
-
-</main>
-
-<footer class="wrap glass">
-  <p>本页面内容仅为律师执业信息与既往案例的简要介绍，不构成正式法律意见，亦不对具体案件结果作出承诺或保证。具体法律问题请结合案件实际情况另行咨询。</p>
-</footer>
-
-<div class="toast" id="toast">微信号已复制</div>
+<div class="toast" id="toast"></div>
 
 <script>
-function copyWx(){
-  var num = "19539042084";
-  var toast = document.getElementById('toast');
-  function show(){
-    toast.classList.add('show');
-    setTimeout(function(){toast.classList.remove('show');}, 1600);
-  }
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(num).then(show).catch(function(){
-      window.prompt("请手动复制微信号：", num);
+/* ================================================================
+   AI 接口配置 —— 部署前请修改此处
+   支持所有 OpenAI 兼容接口：DeepSeek、通义千问、Kimi、智谱 等
+   示例（DeepSeek）:
+     apiUrl: "https://api.deepseek.com/v1/chat/completions"
+     model:  "deepseek-chat"
+   ⚠️ 安全提示：API Key 写在前端会暴露给所有访客，正式上线建议
+   通过云函数等服务端代理转发请求，密钥保存在服务端。
+   ================================================================ */
+const AI_CONFIG = {
+  apiUrl: "",
+  apiKey: "",
+  model: "",
+  systemPromptBase: "你是张恒玮律师个人网站的AI法律咨询助手。张律师专注企业与企业家法律风险防控：刑事辩护（取保候审、职务侵占、合同诈骗、虚开、挪用资金、非吸）、商事争议（股权、合同、公司治理、票据、执行、婚姻家事）、劳动用工合规。请用通俗中文回答访客的初步法律问题，说明相关法律依据，回答简洁分点；结尾提醒：具体案件请添加微信/致电 19539042084 联系张恒玮律师正式咨询。"
+};
+
+let currentType = "刑事辩护";
+const QUICK_QS = {
+  "刑事辩护": ["家人被刑事拘留了怎么办？", "怎么申请取保候审？", "涉嫌职务侵占会怎么判？", "收到虚开发票的调查怎么应对？"],
+  "商事争议": ["股东之间产生纠纷怎么处理？", "对方拖欠合同款怎么追讨？", "法定代表人被限高怎么解除？", "离婚时财产较多怎么分割？"],
+  "劳动用工": ["员工申请劳动仲裁怎么应对？", "被迫离职能主张哪些赔偿？", "企业合规体检包含什么？", "违法解除劳动合同的风险？"]
+};
+
+const msgsEl = document.getElementById("ai-msgs");
+const inputEl = document.getElementById("ai-input");
+const sendBtn = document.getElementById("ai-send");
+const history = [];
+
+function setType(btn){
+  document.querySelectorAll(".ai-type").forEach(b=>b.classList.remove("active"));
+  btn.classList.add("active");
+  currentType = btn.dataset.type;
+  renderQuickQs();
+}
+function renderQuickQs(){
+  const box = document.getElementById("quick-qs");
+  box.innerHTML = "";
+  QUICK_QS[currentType].forEach(q=>{
+    const b = document.createElement("button");
+    b.className = "quick-q";
+    b.textContent = q;
+    b.onclick = ()=>{ inputEl.value = q; sendAI(); };
+    box.appendChild(b);
+  });
+}
+function addMsg(text, cls){
+  const d = document.createElement("div");
+  d.className = "msg " + cls;
+  d.textContent = text;
+  msgsEl.appendChild(d);
+  msgsEl.scrollTop = msgsEl.scrollHeight;
+  return d;
+}
+async function sendAI(){
+  const text = inputEl.value.trim();
+  if(!text || sendBtn.disabled) return;
+  inputEl.value = "";
+  addMsg(text, "user");
+  history.push({role:"user", content:"【咨询类型：" + currentType + "】" + text});
+  sendBtn.disabled = true;
+  const loading = addMsg("正在分析…", "ai loading");
+  try{
+    if(!AI_CONFIG.apiUrl || !AI_CONFIG.apiKey){
+      await new Promise(r=>setTimeout(r,600));
+      loading.classList.remove("loading");
+      loading.textContent = "【演示模式】AI接口尚未配置。站长请在源码顶部 AI_CONFIG 中填入 apiUrl、apiKey、model（支持 DeepSeek、通义、Kimi 等 OpenAI 兼容接口）。\n\n您也可以直接添加微信 19539042084 联系张恒玮律师咨询。";
+      return;
+    }
+    const res = await fetch(AI_CONFIG.apiUrl, {
+      method:"POST",
+      headers:{"Content-Type":"application/json","Authorization":"Bearer "+AI_CONFIG.apiKey},
+      body:JSON.stringify({
+        model:AI_CONFIG.model,
+        messages:[{role:"system",content:AI_CONFIG.systemPromptBase},...history.slice(-10)],
+        temperature:0.5
+      })
     });
-  } else {
-    window.prompt("请手动复制微信号：", num);
+    if(!res.ok) throw new Error("HTTP "+res.status);
+    const data = await res.json();
+    const reply = data.choices?.[0]?.message?.content || "抱歉，未获取到回复。";
+    loading.classList.remove("loading");
+    loading.textContent = reply;
+    history.push({role:"assistant", content:reply});
+  }catch(e){
+    loading.classList.remove("loading");
+    loading.textContent = "请求失败（"+e.message+"），请稍后重试，或添加微信 19539042084 直接联系律师。";
+  }finally{
+    sendBtn.disabled = false;
   }
 }
-</script>
+renderQuickQs();
 
-</body>
-</html>
+/* ===== 预约表单：生成文本并复制 ===== */
+function genForm(){
+  const name = document.getElementById("f-name").value.trim();
+  const phone = document.getElementById("f-phone").value.trim();
+  const type = document.getElementById("f-type").value;
+  const desc = document.getElementById("f-desc").value.trim();
+  if(!name || !phone || !desc){ showToast("请填写姓名、电话和案情简述"); return; }
+  const text = "【预约咨询-来自个人网站】\n称呼：" + name + "\n电话：" + phone + "\n业务类型：" + type + "\n案情简述：" + desc;
+  const box = document.getElementById("form-result");
+  box.style.display = "block";
+  box.textContent = text + "\n\n👆 以上内容已复制，请添加微信 19539042084 粘贴发送给张律师。";
+  copyText(text);
+}
+function copyText(t){
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(()=>showToast("已复制到剪贴板")).catch(()=>fallbackCopy(t));
+  }else{ fallbackCopy(t); }
+}
+function fallbackCopy(t){
+  con
