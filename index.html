@@ -201,26 +201,9 @@
   <p class="kicker">WeChat Articles</p>
   <h2 class="sec-title">公众号文章</h2>
   <p class="sec-sub">微信公众号「唯案唯客」· 办案实务与法律观察 · 点击标题跳转原文</p>
-  <div class="article-list">
-    <a class="article-item" href="https://mp.weixin.qq.com/s/H3cDIDJFfHVAKu7eXjAkog" target="_blank" rel="noopener">
-      <div><h3>立案时程序走不完，放人时程序快不起来——最近办案的两件事</h3><p>办案手记 · 程序正义的两副面孔</p></div>
-      <span class="article-date">2026-07-02</span>
-    </a>
-    <a class="article-item" href="https://mp.weixin.qq.com/s/CNHx8g3FPg1P1eJfmR0Jrg" target="_blank" rel="noopener">
-      <div><h3>公司是你的，公司的钱却不是你的。聊一聊职务侵占那些事儿</h3><p>企业家刑事风险 · 职务侵占罪解析</p></div>
-      <span class="article-date">2026-07-01</span>
-    </a>
-    <a class="article-item" href="http://mp.weixin.qq.com/s?__biz=MzkzNjkwMzIwNg==&amp;mid=2247483764&amp;idx=1&amp;sn=5a2a7223988a0754b2916ac80ef89aa0&amp;chksm=c34f0a0c6b9d6fc937a2a2b09ce794bdb9e40e5232e89cd784f177636fb25150122944f98cd6#rd" target="_blank" rel="noopener">
-      <div><h3>老板被刑事拘留后，怎么争取取保候审？</h3><p>刑事实务 · 黄金37天应对指南</p></div>
-      <span class="article-date">2026-06-29</span>
-    </a>
-    <a class="article-item" href="https://mp.weixin.qq.com/s/mubYcogfUKZj7Xd_XKchAQ" target="_blank" rel="noopener">
-      <div><h3>刑事谅解谈判 操作自查清单</h3><p>刑事实务 · 谅解谈判要点与操作清单</p></div>
-      <span class="article-date">2026-06-25</span>
-    </a>
-  </div>
+  <div class="article-list" id="article-list-home"></div>
   <div class="wechat-banner">
-    <div><b>微信公众号：唯案唯客</b><br><span>持续更新办案实务文章 · 微信搜索「唯案唯客」关注（此处可替换为公众号二维码）</span></div>
+    <div><b>微信公众号：唯案唯客</b><br><span>持续更新办案实务文章 · 微信搜索「唯案唯客」关注</span></div>
     <a class="btn btn-gold" style="margin:0;" href="articles.html">查看全部文章</a>
   </div>
 </section>
@@ -289,6 +272,8 @@
 
 <div class="toast" id="toast"></div>
 
+<script src="articles.js"></script>
+<script>renderArticles("article-list-home", 4);</script>
 <script>
 /* ================================================================
    AI 接口配置 —— 部署前请修改此处
