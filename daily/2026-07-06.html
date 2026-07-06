@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>具身智能行业日报·20260706</title>
+<style>
+  :root{
+    --navy:#0B1F3A;
+    --navy2:#122B4E;
+    --blue:#2E6BE6;
+    --gold:#C9A45C;
+    --gold-light:#E6CFA3;
+    --bg:#F2F4F8;
+    --card:#FFFFFF;
+    --text:#1F2937;
+    --muted:#6B7280;
+    --line:#E5E9F0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei","Source Han Sans SC",sans-serif;
+    color:var(--text);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:750px;margin:0 auto;background:var(--bg);}
+
+  .masthead{
+    background:linear-gradient(150deg,var(--navy) 0%,var(--navy2) 55%,#1A3A6B 100%);
+    color:#fff;padding:44px 32px 36px;position:relative;overflow:hidden;
+  }
+  .masthead::after{
+    content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;
+    border:1px solid rgba(201,164,92,.35);border-radius:50%;
+  }
+  .masthead::before{
+    content:"";position:absolute;right:-30px;top:-110px;width:240px;height:240px;
+    border:1px solid rgba(255,255,255,.12);border-radius:50%;
+  }
+  .brand-row{display:flex;align-items:center;gap:10px;margin-bottom:22px;}
+  .brand-mark{
+    width:34px;height:34px;border:1.5px solid var(--gold);border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1px;
+  }
+  .brand-name{font-size:13px;letter-spacing:3px;color:rgba(255,255,255,.75);}
+  h1.title{font-size:34px;font-weight:800;letter-spacing:2px;line-height:1.3;}
+  .subtitle{
+    display:inline-block;margin-top:10px;padding:4px 14px;
+    border:1px solid rgba(201,164,92,.6);border-radius:999px;
+    color:var(--gold-light);font-size:14px;letter-spacing:4px;
+  }
+  .dateline{margin-top:22px;font-size:14px;color:rgba(255,255,255,.85);letter-spacing:1px;}
+  .dateline b{color:var(--gold-light);font-weight:600;}
+  .lede{
+    margin-top:14px;padding:14px 18px;background:rgba(255,255,255,.07);
+    border-left:3px solid var(--gold);border-radius:0 10px 10px 0;
+    font-size:15.5px;color:#EDF1F7;
+  }
+  .lede .lede-tag{color:var(--gold-light);font-weight:700;margin-right:8px;}
+
+  .section{padding:30px 24px 6px;}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;}
+  .sec-num{
+    font-size:13px;font-weight:800;color:var(--gold);
+    border:1px solid var(--gold);border-radius:6px;padding:1px 8px;letter-spacing:1px;
+  }
+  .sec-title{font-size:22px;font-weight:800;color:var(--navy);letter-spacing:1px;}
+  .sec-sub{font-size:12.5px;color:var(--muted);letter-spacing:1px;}
+
+  .news-card{
+    background:var(--card);border-radius:14px;padding:18px 20px;margin-bottom:14px;
+    box-shadow:0 1px 3px rgba(11,31,58,.06);border:1px solid var(--line);
+  }
+  .news-head{display:flex;gap:12px;align-items:flex-start;}
+  .news-idx{
+    flex:none;width:26px;height:26px;border-radius:8px;background:var(--navy);
+    color:var(--gold-light);font-size:13px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+  .news-title{font-size:17px;font-weight:700;color:var(--navy);line-height:1.5;}
+  .news-body{margin-top:8px;font-size:15px;color:var(--text);}
+  .news-read{
+    margin-top:10px;padding:10px 14px;background:#F4F7FE;border-radius:10px;
+    font-size:14.5px;color:#31456E;
+  }
+  .news-read b{color:var(--blue);}
+  .src{
+    display:inline-block;margin-top:8px;font-size:12px;color:var(--muted);
+    background:#F0F2F6;border-radius:999px;padding:2px 10px;
+  }
+
+  .policy-card{
+    background:var(--card);border-radius:14px;padding:4px 20px;margin-bottom:14px;
+    border:1px solid var(--line);box-shadow:0 1px 3px rgba(11,31,58,.06);
+  }
+  .policy-item{padding:15px 0;border-bottom:1px dashed var(--line);}
+  .policy-item:last-child{border-bottom:none;}
+  .policy-name{font-size:16px;font-weight:700;color:var(--navy);}
+  .policy-name .badge{
+    font-size:11.5px;font-weight:600;color:var(--blue);border:1px solid var(--blue);
+    border-radius:5px;padding:0 6px;margin-right:8px;vertical-align:2px;
+  }
+  .policy-body{margin-top:6px;font-size:14.5px;}
+  .policy-mean{margin-top:6px;font-size:14.5px;color:#31456E;}
+  .policy-mean b{color:var(--gold);filter:brightness(.75);}
+
+  .deep-card{
+    background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);
+    border-radius:16px;padding:26px 24px;margin-bottom:14px;color:#E8EDF5;
+    position:relative;overflow:hidden;
+  }
+  .deep-card::after{
+    content:"§";position:absolute;right:18px;top:6px;font-size:64px;
+    color:rgba(201,164,92,.18);font-family:Georgia,serif;
+  }
+  .deep-title{font-size:19px;font-weight:800;color:#fff;line-height:1.5;padding-right:40px;}
+  .deep-block{margin-top:16px;}
+  .deep-label{
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:2px;
+    color:var(--gold-light);border:1px solid rgba(201,164,92,.55);
+    border-radius:6px;padding:1px 10px;margin-bottom:8px;
+  }
+  .deep-text{font-size:15px;line-height:1.9;color:#D9E1EE;}
+  .deep-text b{color:#fff;}
+  .deep-tips{margin-top:6px;}
+  .deep-tips li{
+    list-style:none;font-size:15px;line-height:1.85;color:#D9E1EE;
+    padding-left:20px;position:relative;margin-top:6px;
+  }
+  .deep-tips li::before{content:"▸";position:absolute;left:2px;color:var(--gold);}
+
+  .know-card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:22px 24px;margin-bottom:14px;box-shadow:0 1px 3px rgba(11,31,58,.06);
+    border-top:4px solid var(--gold);
+  }
+  .know-term{font-size:20px;font-weight:800;color:var(--navy);}
+  .know-en{font-size:13px;color:var(--muted);margin-left:8px;font-weight:400;}
+  .know-body{margin-top:10px;font-size:15px;}
+  .know-body b{color:var(--blue);}
+  .know-hook{
+    margin-top:12px;padding:10px 14px;background:#FBF7EF;border-radius:10px;
+    font-size:14px;color:#7A6134;
+  }
+
+  .footer{background:var(--navy);color:rgba(255,255,255,.85);padding:30px 28px 34px;margin-top:28px;}
+  .card-line{display:flex;align-items:center;gap:14px;}
+  .card-avatar{
+    flex:none;width:46px;height:46px;border-radius:50%;
+    border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;
+    color:var(--gold);font-size:18px;font-weight:700;
+  }
+  .card-name{font-size:16px;font-weight:700;color:#fff;letter-spacing:1px;}
+  .card-info{font-size:13px;color:rgba(255,255,255,.7);margin-top:2px;}
+  .disclaim{
+    margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);
+    font-size:12px;line-height:1.8;color:rgba(255,255,255,.55);
+  }
+</style>
+</head>
+<body>
+<a href="../embodied-ai.html" target="_top" style="display:block;background:#081220;color:#C9A45C;text-align:center;padding:9px 12px;font-size:13px;letter-spacing:1px;text-decoration:none;">← 返回「具身智能观察」栏目 · 查看往期日报</a>
+<div class="page">
+
+  <header class="masthead">
+    <div class="brand-row">
+      <div class="brand-mark">EA</div>
+      <div class="brand-name">EMBODIED AI DAILY</div>
+    </div>
+    <h1 class="title">具身智能行业日报</h1>
+    <div class="subtitle">商业观察 × 法律视角</div>
+    <div class="dateline">2026年7月6日 · 星期一 · <b>第 2 期</b>（含周末回顾）</div>
+    <div class="lede"><span class="lede-tag">今日导语</span>两场大会周末收官，规则密集落地；9天后，全国首部AI拟人化互动新规施行——具身智能的"合规下半场"开始了。</div>
+  </header>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <span class="sec-title">行业要闻速览</span>
+      <span class="sec-sub">周末发生了什么 · 本周看什么</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">1</div>
+        <div class="news-title">上海具身智能产业博览会周六闭幕，《中国具身智能产业发展报告》首发</div>
+      </div>
+      <div class="news-body">为期三天（7月2日至4日）的2026上海国际具身智能产业博览会落幕，展出面积3万平方米、覆盖九大核心领域，同期发布《中国具身智能产业发展报告》。</div>
+      <div class="news-read"><b>解读</b>｜行业第一次有了"官方版本的自我画像"——报告口径将成为地方政府定政策、投资机构定估值时共同引用的基准文本。</div>
+      <span class="src">来源：东方财富网/博览会官方 · 7月4日闭幕</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">2</div>
+        <div class="news-title">2026全球数字经济大会在京收官，近20项规则标准密集出炉</div>
+      </div>
+      <div class="news-body">会期至7月5日的全球数字经济大会闭幕，人形机器人与具身智能体是全场焦点，会上陆续发布近20项行业规则标准，覆盖数据跨境流动、人工智能治理等方向。</div>
+      <div class="news-read"><b>解读</b>｜一个周末两场大会双双收官，共同信号是"规则供给提速"——下半年拼的不再只是演示视频，而是谁能规模化合规交付。</div>
+      <span class="src">来源：北京青年报/网易 · 会期7月2-5日</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">3</div>
+        <div class="news-title">宇树IPO进入读秒：打新攻略已出，市场预期最快7月中下旬申购</div>
+      </div>
+      <div class="news-body">上周四（7月2日）证监会同意宇树科技IPO注册后，各券商打新攻略密集出炉，市场普遍预期7月中下旬至8月上旬完成发行上市，"具身智能第一股"进入最后冲刺。</div>
+      <div class="news-read"><b>解读</b>｜本周至下周将披露发行价与申购安排——这个定价是整个一级市场具身智能估值体系的"公开答案"，产业链公司都在等着对表。</div>
+      <span class="src">来源：新浪财经 · 7月2日</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">4</div>
+        <div class="news-title">倒计时9天：全国首部AI拟人化互动服务新规7月15日施行</div>
+      </div>
+      <div class="news-body">国家网信办、发改委、工信部、公安部、市场监管总局五部门联合公布的《人工智能拟人化互动服务管理暂行办法》将于7月15日正式施行，规范AI情感陪伴类服务。</div>
+      <div class="news-read"><b>解读</b>｜做"AI陪伴""情感交互"的机器人和应用公司只剩9天合规窗口——这是本期深度点评的主角，往下看。</div>
+      <span class="src">来源：国家网信办官网 · 4月10日公布</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">5</div>
+        <div class="news-title">年中盘点：2026年具身智能融资已达数百亿元量级，头部集中加剧</div>
+      </div>
+      <div class="news-body">多家机构近日发布上半年融资盘点，口径略有差异：证券时报统计2026年以来融资事件191起、金额超525亿元；另有第三方统计324起、约390亿元。各口径共同指向：资金加速向头部20家集中。</div>
+      <div class="news-read"><b>解读</b>｜数字打架不影响结论——半年吸金体量已超去年全年，但腰部以下公司的份额在萎缩，下半年并购整合与核心人才流动会明显增多。</div>
+      <span class="src">来源：证券时报/智教新媒 · 7月初盘点（口径并列）</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <span class="sec-title">政策与法律动态</span>
+      <span class="sec-sub">规则正在如何变化</span>
+    </div>
+    <div class="policy-card">
+      <div class="policy-item">
+        <div class="policy-name"><span class="badge">新规倒计时</span>《人工智能拟人化互动服务管理暂行办法》7月15日施行</div>
+        <div class="policy-body">五部门联合发布，规范"模拟自然人人格特征、思维模式和沟通风格的持续性情感互动服务"，设置未成年人保护、身份告知、防沉迷、数据保护、安全评估备案等义务。</div>
+        <div class="policy-mean"><b>对企业意味着</b>｜凡产品带"情感陪伴"功能——无论APP还是实体机器人——都应在9天内完成自查；用户规模大的还要准备安全评估备案。</div>
+      </div>
+      <div class="policy-item">
+        <div class="policy-name"><span class="badge">地方立法</span>全国首部具身智能地方法规施行满两月：杭州条例值得补课</div>
+        <div class="policy-body">《杭州市促进具身智能机器人产业发展条例》5月1日起施行，共7章50条，覆盖技术创新、产业发展、应用促进与安全管理，确立"鼓励创新、包容审慎"的监管基调。</div>
+        <div class="policy-mean"><b>对企业意味着</b>｜注册地和场景落地城市的选择开始有"法域差异"——杭州给出了政策红利与安全义务的完整套餐，预计更多城市将跟进立法。</div>
+      </div>
+      <div class="policy-item">
+        <div class="policy-name"><span class="badge">标准</span>《人形机器人安全分级技术规范》行业标准编制中，正征集参编单位</div>
+        <div class="policy-body">国家工业信息安全发展研究中心5月底启动该行业标准编制工作，并公开征集参编单位；此前全国首个人形机器人全生命周期管理服务平台已在北京发布。</div>
+        <div class="policy-mean"><b>对企业意味着</b>｜"安全分级"未来很可能与场景准入挂钩——有条件的企业应争取参编席位，把自家技术路线写进标准就是最好的护城河。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <span class="sec-title">律师深度点评</span>
+      <span class="sec-sub">新闻背后的法律纵深</span>
+    </div>
+
+    <div class="deep-card">
+      <div class="deep-title">9天后生效：你家的"陪伴机器人"，可能已经被这部新规管上了</div>
+      <div class="deep-block">
+        <span class="deep-label">事件回放</span>
+        <div class="deep-text">五部门4月10日公布《人工智能拟人化互动服务管理暂行办法》，7月15日施行。办法把监管对象定义为"利用人工智能技术，提供模拟自然人人格特征、思维模式和沟通风格的<b>持续性情感互动服务</b>"，情感照护、陪伴、支持类服务均在其列。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">法律拆解</span>
+        <div class="deep-text">具身智能公司最该关心的是三点。<b>第一，实体机器人大概率落入适用范围。</b>办法列举的服务形式是"文字、图片、音频、视频"，没有点名实体机器人——但定义的核心是"AI+持续性情感互动"，带语音陪聊功能的家庭机器人、桌面陪伴机器人完全符合这两个特征，指望"我是硬件不是APP"来豁免，在监管实践中大概率行不通。<b>第二，义务清单相当硬核。</b>核验原文：第14条对未成年人禁止提供"虚拟亲属""虚拟伴侣"类角色设定，不满14周岁须监护人同意并强制未成年人模式；第18条要求明确提示"你在和AI对话"，连续使用超2小时须弹提醒；第16条禁止将用户交互数据随意提供第三方、敏感个人信息未经单独同意不得用于模型训练；第19条禁止用"持续互动挽留"阻止用户退出——最后这条直接打击了很多陪伴产品赖以留存的产品设计。<b>第三，罚款不重、停服才是真风险。</b>第30条罚款上限一般为10万元（危害生命健康的至20万元），看着温和，但"责令停止提供相关服务"对靠陪伴场景吃饭的公司是灭顶之灾；用户达100万或月活10万以上的，第22条还触发向省级网信部门的安全评估义务。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">合规启示</span>
+        <ul class="deep-tips">
+          <li>9天内先做"适用性自查"：产品只要有拟人化语音/文字情感交互功能，按"落入监管"准备，不要赌豁免。</li>
+          <li>产品侧立即排期四件事：AI身份提示、连续2小时使用提醒、未成年人模式（含角色设定禁区）、无障碍退出机制。</li>
+          <li>数据侧改造同意链路：用户聊天记录默认不得进训练库，改为单独同意；对外数据合作协议逐份复核。</li>
+          <li>用户规模过线（注册100万/月活10万）的企业，安全评估报告现在就要启动准备。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="deep-card">
+      <div class="deep-title">央企采购潮将至：机器人公司投标前，先看清这三个"坑"</div>
+      <div class="deep-block">
+        <span class="deep-label">事件回放</span>
+        <div class="deep-text">两条线正在合流：国家电网此前印发规划，年内采购约8500台具身智能设备、总投资约68亿元（含5000台巡检机器狗、500台人形带电作业机器人）；工信部、国务院国资委的"实景实训专项行动"则要求央企开放场景、年底前形成"作业模式"。两者叠加，下半年将迎来央企具身智能招标的密集期。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">法律拆解</span>
+        <div class="deep-text">央企大单是甜蜜的，但和商业客户订单是两套完全不同的法律规则。<b>坑一：招投标程序刚性。</b>央企招标受招标投标法体系约束，投标人之间就报价、方案的任何"沟通协调"都可能构成串通投标——这在刑法上有专门罪名（串通投标罪），行业小圈子里"商量着来"的习惯在这里是刑事红线。<b>坑二：验收与事故责任。</b>电力巡检、带电作业是高危场景，机器人出事故不是普通质量纠纷——合同里的验收标准、安全责任划分、保险安排如果照抄普通设备采购模板，出事时供应商可能兜不住。<b>坑三：知识产权归属。</b>央企采购常附带联合研发条款，要求成果共享甚至归买方——为了一单生意让渡核心算法专利，可能透支公司未来的资本故事。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">合规启示</span>
+        <ul class="deep-tips">
+          <li>投标前做一次围串标风险内审：与同行的任何报价交流记录都可能成为证据，销售团队要专项培训。</li>
+          <li>高危场景合同别用通用模板：验收指标逐项量化，事故责任与保险条款单独谈，运行日志数据的调取权写明。</li>
+          <li>联合研发条款守住底线：背景知识产权（你带进项目的）与前景知识产权（项目中产生的）分开约定，核心模型专利不做无限让渡。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <span class="sec-title">每日一识</span>
+      <span class="sec-sub">每天弄懂一个行业概念</span>
+    </div>
+    <div class="know-card">
+      <div class="know-term">遥操作与数据采集厂<span class="know-en">Teleoperation & Data Factory</span></div>
+      <div class="know-body">机器人不是天生会干活的——它得先看人怎么干。<b>遥操作</b>就是"教练握着学员的手打球"：操作员穿戴动作捕捉设备，远程"附身"机器人完成叠衣服、拧螺丝等任务，机器人把整个过程记录下来变成训练数据。而<b>数据采集厂</b>，就是把这件事工业化——雇佣成百上千名操作员，像流水线一样批量生产"人类示范数据"。行业共识是：具身智能现在缺的不是算法，是数据。大模型可以读遍互联网学会说话，但互联网上没有"手部发力细节"这种数据，只能靠人一遍遍演示。谁握有最大、最干净的动作数据集，谁就握住了下一阶段的竞争门票。</div>
+      <div class="know-hook">💡 法律勾连：数据采集员正在成为一个新职业——他们与采集厂之间是劳动关系还是劳务外包？长时间穿戴设备的职业伤害怎么认定？操作员示范动作生成的数据，权属归谁？这批全新的法律问题，眼下几乎没有现成答案，先想清楚的企业就少踩坑。</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="card-line">
+      <div class="card-avatar">张</div>
+      <div>
+        <div class="card-name">张恒玮 律师</div>
+        <div class="card-info">企业与企业家法律风险防控 · 具身智能产业法律观察<br>电话/微信：195 3904 2084 ｜ 公众号：唯案唯客</div>
+      </div>
+    </div>
+    <div class="disclaim">
+      免责声明：本报告基于公开信息整理，仅供行业学习交流，不构成法律意见或投资建议；
+      具体法律问题请结合个案咨询专业律师。若内容涉及的事实信息与官方披露不一致，
+      以官方披露为准。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
