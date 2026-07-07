@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>具身智能行业日报·20260707</title>
+<style>
+  :root{
+    --navy:#0B1F3A;
+    --navy2:#122B4E;
+    --blue:#2E6BE6;
+    --gold:#C9A45C;
+    --gold-light:#E6CFA3;
+    --bg:#F2F4F8;
+    --card:#FFFFFF;
+    --text:#1F2937;
+    --muted:#6B7280;
+    --line:#E5E9F0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei","Source Han Sans SC",sans-serif;
+    color:var(--text);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:750px;margin:0 auto;background:var(--bg);}
+
+  .masthead{
+    background:linear-gradient(150deg,var(--navy) 0%,var(--navy2) 55%,#1A3A6B 100%);
+    color:#fff;padding:44px 32px 36px;position:relative;overflow:hidden;
+  }
+  .masthead::after{
+    content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;
+    border:1px solid rgba(201,164,92,.35);border-radius:50%;
+  }
+  .masthead::before{
+    content:"";position:absolute;right:-30px;top:-110px;width:240px;height:240px;
+    border:1px solid rgba(255,255,255,.12);border-radius:50%;
+  }
+  .brand-row{display:flex;align-items:center;gap:10px;margin-bottom:22px;}
+  .brand-mark{
+    width:34px;height:34px;border:1.5px solid var(--gold);border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1px;
+  }
+  .brand-name{font-size:13px;letter-spacing:3px;color:rgba(255,255,255,.75);}
+  h1.title{font-size:34px;font-weight:800;letter-spacing:2px;line-height:1.3;}
+  .subtitle{
+    display:inline-block;margin-top:10px;padding:4px 14px;
+    border:1px solid rgba(201,164,92,.6);border-radius:999px;
+    color:var(--gold-light);font-size:14px;letter-spacing:4px;
+  }
+  .dateline{margin-top:22px;font-size:14px;color:rgba(255,255,255,.85);letter-spacing:1px;}
+  .dateline b{color:var(--gold-light);font-weight:600;}
+  .lede{
+    margin-top:14px;padding:14px 18px;background:rgba(255,255,255,.07);
+    border-left:3px solid var(--gold);border-radius:0 10px 10px 0;
+    font-size:15.5px;color:#EDF1F7;
+  }
+  .lede .lede-tag{color:var(--gold-light);font-weight:700;margin-right:8px;}
+
+  .section{padding:30px 24px 6px;}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;}
+  .sec-num{
+    font-size:13px;font-weight:800;color:var(--gold);
+    border:1px solid var(--gold);border-radius:6px;padding:1px 8px;letter-spacing:1px;
+  }
+  .sec-title{font-size:22px;font-weight:800;color:var(--navy);letter-spacing:1px;}
+  .sec-sub{font-size:12.5px;color:var(--muted);letter-spacing:1px;}
+
+  .news-card{
+    background:var(--card);border-radius:14px;padding:18px 20px;margin-bottom:14px;
+    box-shadow:0 1px 3px rgba(11,31,58,.06);border:1px solid var(--line);
+  }
+  .news-head{display:flex;gap:12px;align-items:flex-start;}
+  .news-idx{
+    flex:none;width:26px;height:26px;border-radius:8px;background:var(--navy);
+    color:var(--gold-light);font-size:13px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+  .news-title{font-size:17px;font-weight:700;color:var(--navy);line-height:1.5;}
+  .news-body{margin-top:8px;font-size:15px;color:var(--text);}
+  .news-read{
+    margin-top:10px;padding:10px 14px;background:#F4F7FE;border-radius:10px;
+    font-size:14.5px;color:#31456E;
+  }
+  .news-read b{color:var(--blue);}
+  .src{
+    display:inline-block;margin-top:8px;font-size:12px;color:var(--muted);
+    background:#F0F2F6;border-radius:999px;padding:2px 10px;
+  }
+
+  .policy-card{
+    background:var(--card);border-radius:14px;padding:4px 20px;margin-bottom:14px;
+    border:1px solid var(--line);box-shadow:0 1px 3px rgba(11,31,58,.06);
+  }
+  .policy-item{padding:15px 0;border-bottom:1px dashed var(--line);}
+  .policy-item:last-child{border-bottom:none;}
+  .policy-name{font-size:16px;font-weight:700;color:var(--navy);}
+  .policy-name .badge{
+    font-size:11.5px;font-weight:600;color:var(--blue);border:1px solid var(--blue);
+    border-radius:5px;padding:0 6px;margin-right:8px;vertical-align:2px;
+  }
+  .policy-body{margin-top:6px;font-size:14.5px;}
+  .policy-mean{margin-top:6px;font-size:14.5px;color:#31456E;}
+  .policy-mean b{color:var(--gold);filter:brightness(.75);}
+
+  .deep-card{
+    background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);
+    border-radius:16px;padding:26px 24px;margin-bottom:14px;color:#E8EDF5;
+    position:relative;overflow:hidden;
+  }
+  .deep-card::after{
+    content:"§";position:absolute;right:18px;top:6px;font-size:64px;
+    color:rgba(201,164,92,.18);font-family:Georgia,serif;
+  }
+  .deep-title{font-size:19px;font-weight:800;color:#fff;line-height:1.5;padding-right:40px;}
+  .deep-block{margin-top:16px;}
+  .deep-label{
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:2px;
+    color:var(--gold-light);border:1px solid rgba(201,164,92,.55);
+    border-radius:6px;padding:1px 10px;margin-bottom:8px;
+  }
+  .deep-text{font-size:15px;line-height:1.9;color:#D9E1EE;}
+  .deep-text b{color:#fff;}
+  .deep-tips{margin-top:6px;}
+  .deep-tips li{
+    list-style:none;font-size:15px;line-height:1.85;color:#D9E1EE;
+    padding-left:20px;position:relative;margin-top:6px;
+  }
+  .deep-tips li::before{content:"▸";position:absolute;left:2px;color:var(--gold);}
+
+  .know-card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:22px 24px;margin-bottom:14px;box-shadow:0 1px 3px rgba(11,31,58,.06);
+    border-top:4px solid var(--gold);
+  }
+  .know-term{font-size:20px;font-weight:800;color:var(--navy);}
+  .know-en{font-size:13px;color:var(--muted);margin-left:8px;font-weight:400;}
+  .know-body{margin-top:10px;font-size:15px;}
+  .know-body b{color:var(--blue);}
+  .know-hook{
+    margin-top:12px;padding:10px 14px;background:#FBF7EF;border-radius:10px;
+    font-size:14px;color:#7A6134;
+  }
+
+  .footer{background:var(--navy);color:rgba(255,255,255,.85);padding:30px 28px 34px;margin-top:28px;}
+  .card-line{display:flex;align-items:center;gap:14px;}
+  .card-avatar{
+    flex:none;width:46px;height:46px;border-radius:50%;
+    border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;
+    color:var(--gold);font-size:18px;font-weight:700;
+  }
+  .card-name{font-size:16px;font-weight:700;color:#fff;letter-spacing:1px;}
+  .card-info{font-size:13px;color:rgba(255,255,255,.7);margin-top:2px;}
+  .disclaim{
+    margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);
+    font-size:12px;line-height:1.8;color:rgba(255,255,255,.55);
+  }
+</style>
+</head>
+<body>
+<a href="../embodied-ai.html" target="_top" style="display:block;background:#081220;color:#C9A45C;text-align:center;padding:9px 12px;font-size:13px;letter-spacing:1px;text-decoration:none;">← 返回「具身智能观察」栏目 · 查看往期日报</a>
+<div class="page">
+
+  <header class="masthead">
+    <div class="brand-row">
+      <div class="brand-mark">EA</div>
+      <div class="brand-name">EMBODIED AI DAILY</div>
+    </div>
+    <h1 class="title">具身智能行业日报</h1>
+    <div class="subtitle">商业观察 × 法律视角</div>
+    <div class="dateline">2026年7月7日 · 星期二 · <b>第 3 期</b></div>
+    <div class="lede"><span class="lede-tag">今日导语</span>订单排到2027年的另一面：全球首例人形机器人工伤诉讼浮出水面，"机器人安全"正从工程问题变成法律问题。</div>
+  </header>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <span class="sec-title">行业要闻速览</span>
+      <span class="sec-sub">今天发生了什么</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">1</div>
+        <div class="news-title">"订单排到2027年"：量产元年被订单填满，交付能力成胜负手</div>
+      </div>
+      <div class="news-body">行业媒体7月6日刊发产业盘点：优必选U1系列预售订单累计突破13,361台、首批9月16日启动交付；特斯拉Optimus被大摩预测2026年出货2.5万台、2027年突破7万台；轮足机器人成本三年下降约72%。</div>
+      <div class="news-read"><b>解读</b>｜行业叙事正式从"拿订单"切换到"交得出"——接下来暴露的将是产能爬坡、供应链和履约违约问题，订单簿越厚，交付条款越值钱。</div>
+      <span class="src">来源：OFweek智能制造网 · 7月6日</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">2</div>
+        <div class="news-title">全球首例人形机器人工伤诉讼曝光：特斯拉工厂机器人"意外激活"伤人</div>
+      </div>
+      <div class="news-body">7月6日媒体深度报道披露：2025年2月特斯拉弗里蒙特工厂一台人形机器人在维修窗口意外激活，将一名工人打晕并压住，该案已成为有记录的第一起人形机器人工作场所伤害诉讼。</div>
+      <div class="news-read"><b>解读</b>｜行业等了很久的"第一案"来了——它将为全球范围内"机器人伤人谁担责"提供第一个司法样本，本期深度点评详细拆解。</div>
+      <span class="src">来源：网易科技 · 7月6日</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">3</div>
+        <div class="news-title">Figure前安全主管爆料：Figure 02臂力超人体疼痛阈值20倍</div>
+      </div>
+      <div class="news-body">同篇报道援引Figure前安全主管指控：Figure 02机器人手臂力量"超过人体疼痛阈值20倍"、超过击碎成年人头骨所需力量的两倍，一次测试中失控一拳在不锈钢冰箱上砸出6毫米深凹痕。</div>
+      <div class="news-read"><b>解读</b>｜爆料的杀伤力在于"明知而未改"——如果指控坐实，将从产品责任升级为惩罚性赔偿风险；安全标准滞后于量产速度，是全行业的达摩克利斯之剑。</div>
+      <span class="src">来源：网易科技 · 7月6日</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">4</div>
+        <div class="news-title">投行持续上调预测：2026年中国人形机器人出货量看至4-5万台</div>
+      </div>
+      <div class="news-body">据行业媒体整理，摩根士丹利年内两度上调中国人形机器人出货量预测（年初1.4万台，最新上修至5万台级），野村证券同步调至4万至5万台区间。</div>
+      <div class="news-read"><b>解读</b>｜国际卖方共识正在形成，这通常意味着海外资金对中国机器人产业链的配置需求上升——上游零部件公司最先受益。</div>
+      <span class="src">来源：OFweek整理大摩/野村观点 · 7月6日</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">5</div>
+        <div class="news-title">本周跟踪：宇树IPO发行公告待披露；何小鹏亲自挂帅机器人业务</div>
+      </div>
+      <div class="news-body">宇树科技7月2日注册获批后，截至发稿发行公告尚未披露，市场预期7月中下旬申购；另据产业报道，小鹏CEO何小鹏已亲自兼任机器人业务CEO，力争IRON年底量产、月产能上千台。</div>
+      <div class="news-read"><b>解读</b>｜"一把手亲自下场"是车企对机器人业务最重的组织表态；宇树发行价一旦公布，就是全行业估值对表的时刻——本周日报持续盯。</div>
+      <span class="src">来源：新浪财经7月2日/OFweek 7月6日</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <span class="sec-title">政策与法律动态</span>
+      <span class="sec-sub">规则正在如何变化</span>
+    </div>
+    <div class="policy-card">
+      <div class="policy-item">
+        <div class="policy-name"><span class="badge">倒计时8天</span>《人工智能拟人化互动服务管理暂行办法》7月15日施行</div>
+        <div class="policy-body">五部门新规生效进入最后一周：AI身份提示、未成年人模式、2小时使用提醒、交互数据不得默认用于训练等义务即将落地（详见本报第2期深度拆解）。</div>
+        <div class="policy-mean"><b>对企业意味着</b>｜带情感陪伴功能的产品，这周是完成整改的最后窗口；下周三起，监管部门可依据办法直接执法。</div>
+      </div>
+      <div class="policy-item">
+        <div class="policy-name"><span class="badge">标准</span>敏感个人信息处理国标已实施，机器人数据采集有了直接依据</div>
+        <div class="policy-body">GB/T 45574-2025《敏感个人信息识别与处理规范》自2025年11月起实施，明确敏感信息识别与处理规则——机器人在家庭、医疗等场景采集的人脸、健康、行踪数据多数落入其中。</div>
+        <div class="policy-mean"><b>对企业意味着</b>｜具身智能产品的摄像头和传感器天然"扫"到敏感信息，数据合规自查应以该国标为对照清单，尤其是家用场景产品。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <span class="sec-title">律师深度点评</span>
+      <span class="sec-sub">新闻背后的法律纵深</span>
+    </div>
+
+    <div class="deep-card">
+      <div class="deep-title">首例机器人工伤诉讼：如果同样的事发生在中国工厂，责任怎么分？</div>
+      <div class="deep-block">
+        <span class="deep-label">事件回放</span>
+        <div class="deep-text">据7月6日媒体报道，2025年2月特斯拉弗里蒙特工厂一台人形机器人在维修窗口意外激活，致一名工人被打晕压住，该案成为首例有记录的人形机器人工作场所伤害诉讼；同篇报道还披露Figure前安全主管对Figure 02机器人力量远超安全阈值的指控。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">法律拆解</span>
+        <div class="deep-text">把场景搬回中国法下，这类事故的责任是一张<b>三层网</b>。<b>第一层：工伤保险。</b>员工在工作场所被机器人所伤，属于典型工伤，走无过错的工伤保险赔付——这层不问谁的错，先保人。<b>第二层：对机器人厂商的产品责任。</b>工伤赔付不是终点：如果事故源于产品缺陷（"维修模式下仍可被激活"本身就指向设计缺陷或警示缺陷），受伤员工可以在工伤待遇之外另行向厂商主张人身损害赔偿，用工单位先行赔付的也可向厂商追偿——<b>一起事故，两条请求权，部署机器人的工厂和卖机器人的厂商都跑不掉</b>。<b>第三层：刑事与惩罚性风险。</b>Figure爆料的可怕之处在于"明知"二字：若企业明知产品力量参数足以致命仍不设限量产，在中国法下可能触发产品责任中的惩罚性赔偿；造成重大伤亡的，安全管理人员还可能面临重大责任事故类犯罪的追责。而贯穿三层的胜负手只有一个——<b>机器人的运行日志</b>：维修模式是否开启、激活指令从何而来、力控参数是多少，全在日志里。谁在事故第一时间封存了日志，谁就掌握了定责的主动权。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">合规启示</span>
+        <ul class="deep-tips">
+          <li>部署方（工厂/物流/商业体）：为机器人作业区建立物理隔离与维修上锁制度（检修时断电挂牌），员工安全培训留痕——这些记录在工伤争议中就是企业的"免责档案"。</li>
+          <li>采购合同增加"事故条款"：约定事故后日志封存与双方共同调取机制、厂商配合调查义务、产品责任险的投保方与保额。</li>
+          <li>厂商：安全测试记录、力控参数设定依据、已知风险的整改记录，从现在起按"未来会成为呈堂证供"的标准留存。</li>
+          <li>有美国业务的出海企业特别注意：美国诉讼下的惩罚性赔偿和证据开示制度，会把内部邮件里的每一句"我早就说过有风险"变成天价赔偿的引信。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="deep-card">
+      <div class="deep-title">1.3万台预售订单的法律账：机器人卖给个人，规则完全变了</div>
+      <div class="deep-block">
+        <span class="deep-label">事件回放</span>
+        <div class="deep-text">优必选U1系列预售订单突破13,361台，首批9月16日才启动交付；宇树R1把价格拉到2.99万元。人形机器人第一次大规模直面个人消费者——先收钱、后交货的预售模式随之而来。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">法律拆解</span>
+        <div class="deep-text">卖给工厂是商事合同，双方都是行家；<b>卖给个人消费者，消费者权益保护的整套规则立即激活</b>，厂商的法律环境陡然变化。三个新考题：<b>其一，预售款与交付延期。</b>数月的交付周期里，若产能爬坡不及预期，构成违约；预售协议里的交付时间、延期补偿、解约退款条款，绝大多数公司还在用汽车行业模板凑合，而机器人交付的不确定性远高于汽车。<b>其二，宣传参数的证明责任。</b>"88个自由度""复现90%人类基础动作"这类发布会语言一旦写进商品详情页，就从营销话术变成合同承诺——实物达不到，消费者可主张虚假宣传，行政处罚与民事赔偿并行。<b>其三，退货与定金规则。</b>线上预售的机器人是否适用七天无理由退货？收的是"定金"还是"订金"？一字之差，能不能双倍返还、能不能没收，结果完全不同。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">合规启示</span>
+        <ul class="deep-tips">
+          <li>预售协议单独起草：交付窗口写区间不写死日期、延期分档补偿、超期解约退款路径，一次讲清楚。</li>
+          <li>发布会PPT和商品详情页分开管理：详情页参数逐项经法务过目，做不到的能力写"实验室数据"并注明条件。</li>
+          <li>收款名目统一用"预付款"并明确退款规则，避免"定金"二字带来的双倍返还争议。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <span class="sec-title">每日一识</span>
+      <span class="sec-sub">每天弄懂一个行业概念</span>
+    </div>
+    <div class="know-card">
+      <div class="know-term">力控与柔顺控制<span class="know-en">Force Control & Compliance</span></div>
+      <div class="know-body">今天的新闻里，机器人一拳能砸凹不锈钢冰箱——那为什么还敢让它进工厂、进家庭？答案就在<b>力控</b>。普通电机控制只管"走到哪个位置"，哪怕前面是人也会硬顶过去；力控则是让机器人时刻感知"手上使了多大劲"，碰到意外阻力立刻收力。<b>柔顺控制</b>更进一步：像人handshake（握手）一样，对方硬它就软、对方软它就稳——被推一下会顺势退让而不是硬扛。类比记忆：位置控制是"闭着眼睛出拳"，力控是"摸着力道出手"，柔顺控制是"太极推手"。这也是为什么灵巧手、打磨、装配这些"接触型任务"必须用力控——<b>它是机器人从"危险的铁疙瘩"变成"能共处的同事"的技术前提</b>。</div>
+      <div class="know-hook">💡 法律勾连：力控参数就是安全事故里的"技术心证"——出事后鉴定机构首先看的就是力矩限制设了多少、碰撞检测阈值是多少。厂商把这些参数文档化、部署方在验收时逐项确认，就是双方最好的自我保护。</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="card-line">
+      <div class="card-avatar">张</div>
+      <div>
+        <div class="card-name">张恒玮 律师</div>
+        <div class="card-info">企业与企业家法律风险防控 · 具身智能产业法律观察<br>电话/微信：195 3904 2084 ｜ 公众号：唯案唯客</div>
+      </div>
+    </div>
+    <div class="disclaim">
+      免责声明：本报告基于公开信息整理，仅供行业学习交流，不构成法律意见或投资建议；
+      具体法律问题请结合个案咨询专业律师。若内容涉及的事实信息与官方披露不一致，
+      以官方披露为准。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
