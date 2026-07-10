@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>具身智能行业日报·20260710</title>
+<style>
+  :root{
+    --navy:#0B1F3A;
+    --navy2:#122B4E;
+    --blue:#2E6BE6;
+    --gold:#C9A45C;
+    --gold-light:#E6CFA3;
+    --bg:#F2F4F8;
+    --card:#FFFFFF;
+    --text:#1F2937;
+    --muted:#6B7280;
+    --line:#E5E9F0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    background:var(--bg);
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei","Source Han Sans SC",sans-serif;
+    color:var(--text);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  .page{max-width:750px;margin:0 auto;background:var(--bg);}
+
+  .masthead{
+    background:linear-gradient(150deg,var(--navy) 0%,var(--navy2) 55%,#1A3A6B 100%);
+    color:#fff;padding:44px 32px 36px;position:relative;overflow:hidden;
+  }
+  .masthead::after{
+    content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;
+    border:1px solid rgba(201,164,92,.35);border-radius:50%;
+  }
+  .masthead::before{
+    content:"";position:absolute;right:-30px;top:-110px;width:240px;height:240px;
+    border:1px solid rgba(255,255,255,.12);border-radius:50%;
+  }
+  .brand-row{display:flex;align-items:center;gap:10px;margin-bottom:22px;}
+  .brand-mark{
+    width:34px;height:34px;border:1.5px solid var(--gold);border-radius:8px;
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold);font-weight:700;font-size:15px;letter-spacing:1px;
+  }
+  .brand-name{font-size:13px;letter-spacing:3px;color:rgba(255,255,255,.75);}
+  h1.title{font-size:34px;font-weight:800;letter-spacing:2px;line-height:1.3;}
+  .subtitle{
+    display:inline-block;margin-top:10px;padding:4px 14px;
+    border:1px solid rgba(201,164,92,.6);border-radius:999px;
+    color:var(--gold-light);font-size:14px;letter-spacing:4px;
+  }
+  .dateline{margin-top:22px;font-size:14px;color:rgba(255,255,255,.85);letter-spacing:1px;}
+  .dateline b{color:var(--gold-light);font-weight:600;}
+  .lede{
+    margin-top:14px;padding:14px 18px;background:rgba(255,255,255,.07);
+    border-left:3px solid var(--gold);border-radius:0 10px 10px 0;
+    font-size:15.5px;color:#EDF1F7;
+  }
+  .lede .lede-tag{color:var(--gold-light);font-weight:700;margin-right:8px;}
+
+  .section{padding:30px 24px 6px;}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;}
+  .sec-num{
+    font-size:13px;font-weight:800;color:var(--gold);
+    border:1px solid var(--gold);border-radius:6px;padding:1px 8px;letter-spacing:1px;
+  }
+  .sec-title{font-size:22px;font-weight:800;color:var(--navy);letter-spacing:1px;}
+  .sec-sub{font-size:12.5px;color:var(--muted);letter-spacing:1px;}
+
+  .news-card{
+    background:var(--card);border-radius:14px;padding:18px 20px;margin-bottom:14px;
+    box-shadow:0 1px 3px rgba(11,31,58,.06);border:1px solid var(--line);
+  }
+  .news-head{display:flex;gap:12px;align-items:flex-start;}
+  .news-idx{
+    flex:none;width:26px;height:26px;border-radius:8px;background:var(--navy);
+    color:var(--gold-light);font-size:13px;font-weight:700;
+    display:flex;align-items:center;justify-content:center;margin-top:2px;
+  }
+  .news-title{font-size:17px;font-weight:700;color:var(--navy);line-height:1.5;}
+  .news-body{margin-top:8px;font-size:15px;color:var(--text);}
+  .news-read{
+    margin-top:10px;padding:10px 14px;background:#F4F7FE;border-radius:10px;
+    font-size:14.5px;color:#31456E;
+  }
+  .news-read b{color:var(--blue);}
+  .src{
+    display:inline-block;margin-top:8px;font-size:12px;color:var(--muted);
+    background:#F0F2F6;border-radius:999px;padding:2px 10px;
+  }
+
+  .policy-card{
+    background:var(--card);border-radius:14px;padding:4px 20px;margin-bottom:14px;
+    border:1px solid var(--line);box-shadow:0 1px 3px rgba(11,31,58,.06);
+  }
+  .policy-item{padding:15px 0;border-bottom:1px dashed var(--line);}
+  .policy-item:last-child{border-bottom:none;}
+  .policy-name{font-size:16px;font-weight:700;color:var(--navy);}
+  .policy-name .badge{
+    font-size:11.5px;font-weight:600;color:var(--blue);border:1px solid var(--blue);
+    border-radius:5px;padding:0 6px;margin-right:8px;vertical-align:2px;
+  }
+  .policy-body{margin-top:6px;font-size:14.5px;}
+  .policy-mean{margin-top:6px;font-size:14.5px;color:#31456E;}
+  .policy-mean b{color:var(--gold);filter:brightness(.75);}
+
+  .deep-card{
+    background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);
+    border-radius:16px;padding:26px 24px;margin-bottom:14px;color:#E8EDF5;
+    position:relative;overflow:hidden;
+  }
+  .deep-card::after{
+    content:"§";position:absolute;right:18px;top:6px;font-size:64px;
+    color:rgba(201,164,92,.18);font-family:Georgia,serif;
+  }
+  .deep-title{font-size:19px;font-weight:800;color:#fff;line-height:1.5;padding-right:40px;}
+  .deep-block{margin-top:16px;}
+  .deep-label{
+    display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:2px;
+    color:var(--gold-light);border:1px solid rgba(201,164,92,.55);
+    border-radius:6px;padding:1px 10px;margin-bottom:8px;
+  }
+  .deep-text{font-size:15px;line-height:1.9;color:#D9E1EE;}
+  .deep-text b{color:#fff;}
+  .deep-tips{margin-top:6px;}
+  .deep-tips li{
+    list-style:none;font-size:15px;line-height:1.85;color:#D9E1EE;
+    padding-left:20px;position:relative;margin-top:6px;
+  }
+  .deep-tips li::before{content:"▸";position:absolute;left:2px;color:var(--gold);}
+
+  .know-card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:22px 24px;margin-bottom:14px;box-shadow:0 1px 3px rgba(11,31,58,.06);
+    border-top:4px solid var(--gold);
+  }
+  .know-term{font-size:20px;font-weight:800;color:var(--navy);}
+  .know-en{font-size:13px;color:var(--muted);margin-left:8px;font-weight:400;}
+  .know-body{margin-top:10px;font-size:15px;}
+  .know-body b{color:var(--blue);}
+  .know-hook{
+    margin-top:12px;padding:10px 14px;background:#FBF7EF;border-radius:10px;
+    font-size:14px;color:#7A6134;
+  }
+
+  .footer{background:var(--navy);color:rgba(255,255,255,.85);padding:30px 28px 34px;margin-top:28px;}
+  .card-line{display:flex;align-items:center;gap:14px;}
+  .card-avatar{
+    flex:none;width:46px;height:46px;border-radius:50%;
+    border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;
+    color:var(--gold);font-size:18px;font-weight:700;
+  }
+  .card-name{font-size:16px;font-weight:700;color:#fff;letter-spacing:1px;}
+  .card-info{font-size:13px;color:rgba(255,255,255,.7);margin-top:2px;}
+  .disclaim{
+    margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);
+    font-size:12px;line-height:1.8;color:rgba(255,255,255,.55);
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="masthead">
+    <div class="brand-row">
+      <div class="brand-mark">EA</div>
+      <div class="brand-name">EMBODIED AI DAILY</div>
+    </div>
+    <h1 class="title">具身智能行业日报</h1>
+    <div class="subtitle">商业观察 × 法律视角</div>
+    <div class="dateline">2026年7月10日 · 星期五 · <b>第 4 期</b></div>
+    <div class="lede"><span class="lede-tag">今日导语</span>上海官宣年产量剑指10万台，而监管"三件套"正在合拢——智能体备案召回、拟人化新规、安全分级，机器人的"持证上岗"时代来了。</div>
+  </header>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <span class="sec-title">行业要闻速览</span>
+      <span class="sec-sub">今天发生了什么</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">1</div>
+        <div class="news-title">上海官宣：今年人形机器人整机产量有望突破10万台，WAIC临近</div>
+      </div>
+      <div class="news-body">上海市政府7月7日举行新闻发布会，介绍2026世界人工智能大会暨人工智能全球治理高级别会议筹备进展，会上披露：2025年我国AI核心产业规模超1.2万亿元，今年人形机器人整机产量有望突破10万台。</div>
+      <div class="news-read"><b>解读</b>｜"10万台"从年初的机构预测变成了政府发布会口径——官方背书产量目标，意味着场景开放、补贴和监管配套都会朝这个数字对齐。</div>
+      <span class="src">来源：人民网/澎湃新闻 · 7月7日</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">2</div>
+        <div class="news-title">宇树IPO注册生效，73天刷新科创板审核纪录；发行公告仍待披露</div>
+      </div>
+      <div class="news-body">上交所官网显示宇树科技审核状态已变更为"注册生效"，从受理到过会仅73天，刷新近年科创板硬科技IPO审核纪录；拟发行不低于4044.64万股、募资42.02亿元，对应发行估值约420亿元。发行价与申购日期截至发稿尚未公告。</div>
+      <div class="news-read"><b>解读</b>｜"光速"过会是监管给整个赛道的信号弹——智元、银河通用们的IPO窗口正在打开；发行公告可能随时落地，打新窗口本周末后随时开启。</div>
+      <span class="src">来源：上交所官网/杭州日报 · 7月6-8日</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">3</div>
+        <div class="news-title">特斯拉Optimus三代机计划7月下旬至8月投产，初期年化产能约7万台</div>
+      </div>
+      <div class="news-body">据行业媒体报道，特斯拉计划于7月下旬或8月正式投产第三代人形机器人Optimus，初期年化产能目标上调至约7万台，与摩根士丹利此前"2027年出货突破7万台"的预测相互印证。</div>
+      <div class="news-read"><b>解读</b>｜特斯拉投产时点若坐实，全球两大市场（中美）将同步进入量产竞赛——对国内供应链公司既是订单机会，也是技术标准话语权之争。</div>
+      <span class="src">来源：行业媒体综合 · 7月上旬</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">4</div>
+        <div class="news-title">资金面：逾550亿元净流入人形机器人板块，两融资金进场</div>
+      </div>
+      <div class="news-body">据新浪财经报道，近期人形机器人板块获逾550亿元资金净流入，两融资金趁调整抄底科技股，机器人概念活跃度明显回升。</div>
+      <div class="news-read"><b>解读</b>｜宇树上市倒计时+WAIC临近，二级市场在提前抢跑"事件行情"——板块波动会加大，产业链公司的股价噪音未必反映基本面。</div>
+      <span class="src">来源：新浪财经 · 7月4日</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-head">
+        <div class="news-idx">5</div>
+        <div class="news-title">供应链信号：连接器厂商披露与多家具身机器人公司批量供货</div>
+      </div>
+      <div class="news-body">机构调研信息显示，瑞可达等产业链公司披露已与多个头部具身机器人公司合作，开发完成几十款产品并形成批量供货。</div>
+      <div class="news-read"><b>解读</b>｜"批量供货"四个字比任何发布会都实在——上游供应链的出货数据是验证整机厂订单真实性的最好交叉证据。</div>
+      <span class="src">来源：新浪财经（机构调研）· 7月6日</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <span class="sec-title">政策与法律动态</span>
+      <span class="sec-sub">规则正在如何变化</span>
+    </div>
+    <div class="policy-card">
+      <div class="policy-item">
+        <div class="policy-name"><span class="badge">倒计时5天</span>《人工智能拟人化互动服务管理暂行办法》下周三施行</div>
+        <div class="policy-body">7月15日起，AI身份提示、未成年人模式、2小时使用提醒、交互数据不得默认用于训练等义务正式可执法（详见本报第2期深度拆解）。</div>
+        <div class="policy-mean"><b>对企业意味着</b>｜带情感陪伴功能的产品整改进入最后5天；下周起本报将关注首批执法案例。</div>
+      </div>
+      <div class="policy-item">
+        <div class="policy-name"><span class="badge">框架文件</span>三部门《智能体规范应用与创新发展实施意见》：备案、测试、召回三件工具入箱</div>
+        <div class="policy-body">网信办、发改委、工信部5月8日联合印发，确立智能体分类分级治理框架：敏感领域和重点行业实施备案、测试、产品召回等管理措施，低风险领域靠自合规测试与行业自律。</div>
+        <div class="policy-mean"><b>对企业意味着</b>｜机器人就是"有身体的智能体"——进医院、上电网、跑马路的产品将面临备案与召回义务，详见本期深度点评。</div>
+      </div>
+      <div class="policy-item">
+        <div class="policy-name"><span class="badge">伦理审查</span>工信部《人工智能科技伦理审查和服务办法（试行）》已于3月出台</div>
+        <div class="policy-body">推动AI伦理治理"制度化、工程化、标准化"，研发活动的伦理审查从倡导走向程序要求。</div>
+        <div class="policy-mean"><b>对企业意味着</b>｜涉及人机交互、生物特征采集的机器人研发项目，立项阶段就应留出伦理审查环节与文档，申报政府项目时这是加分项也是门槛。</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <span class="sec-title">律师深度点评</span>
+      <span class="sec-sub">新闻背后的法律纵深</span>
+    </div>
+
+    <div class="deep-card">
+      <div class="deep-title">监管"三件套"合拢：你的机器人，法律上是一个待备案的"智能体"</div>
+      <div class="deep-block">
+        <span class="deep-label">事件回放</span>
+        <div class="deep-text">把本周的政策信息连起来看：三部门《智能体规范应用与创新发展实施意见》确立分类分级治理（敏感领域备案、测试、召回），《拟人化互动服务管理暂行办法》5天后施行，《人形机器人安全分级技术规范》行业标准编制中——三份文件分别管"智能体身份"、"情感交互行为"和"物理安全等级"。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">法律拆解</span>
+        <div class="deep-text">最值得企业注意的是《实施意见》里的定义：智能体是"具备自主感知、记忆、决策、交互、执行能力的智能系统"——<b>人形机器人逐字符合，它就是长了身体的智能体</b>。由此推出三个判断。<b>其一，"召回"第一次进入AI监管工具箱，而它对机器人行业格外沉重。</b>纯软件产品的"召回"可以是一次OTA推送，成本近乎为零；实体机器人的召回是物流、返厂、替换机、客户赔偿的全链条成本——参照汽车行业经验，一次大规模召回足以吞掉一年利润。产品设计阶段就要考虑"可远程处置性"：哪些缺陷能OTA修复、哪些必须物理召回，直接决定风险敞口。<b>其二，"敏感领域"是命门词但暂无清单。</b>医疗、电网、交通、公共安全大概率在列——恰好是国网8500台采购、医院导诊机器人这些当下最热的落地场景。规则先于清单出台，意味着<b>先落地的企业实际上在替监管"试错"</b>，与场景方的合同里必须写清"因监管政策变化导致部署中止/整改"的风险分担。<b>其三，三件套叠加后，机器人公司的合规义务开始像药企。</b>身份要备案（智能体意见）、行为有规范（拟人化办法）、安全要分级（技术规范）、研发过伦理审查（工信部办法）——这套组合拳对小公司是负担，对合规先行者却是护城河：未来招标文件里，"已完成备案"会像"有生产资质"一样成为门票。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">合规启示</span>
+        <ul class="deep-tips">
+          <li>给自家产品做一次"监管映射"：对照智能体定义和四份文件，列出适用条款清单——多数公司会发现自己同时落入两份以上文件的射程。</li>
+          <li>设计"召回预案"并写进与客户的合同：明确OTA修复与物理召回的边界、费用承担、替换机安排——先说清楚比出事再谈便宜十倍。</li>
+          <li>敏感场景（医疗/电力/交通）的部署合同增加"监管变化条款"：政策要求备案或整改时，双方义务与费用如何分担。</li>
+          <li>把"合规进度"做成销售材料：备案、测试报告、伦理审查记录整理成合规档案包，投标和融资尽调时直接拿得出来。</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="deep-card">
+      <div class="deep-title">73天过会的另一面：审核提速不是放水，是把责任前移给了企业自己</div>
+      <div class="deep-block">
+        <span class="deep-label">事件回放</span>
+        <div class="deep-text">宇树科技从IPO受理到过会仅用73天，刷新近年科创板硬科技审核纪录，7月6日注册生效。多家具身智能公司被市场视为下一批IPO候选。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">法律拆解</span>
+        <div class="deep-text">审核提速常被误读为"门槛降低"，法律逻辑恰恰相反：<b>问询轮次减少，意味着监管把核查压力从"审出来"转向"报进来"</b>——招股书的每一句话、每一个数字，发行人和中介机构承担的信息披露责任一分没少，反而因为缺少多轮问询的"纠错机会"而更重。注册制下，上市后被查出申报文件虚假记载的，等待企业的是欺诈发行的行政处罚、投资者集体索赔乃至刑事追责，实控人和签字高管都在射程内。对跟在宇树后面排队的机器人公司，"光速通道"的正确用法是：<b>用别人省下的审核时间，把自己的申报质量做扎实</b>——尤其是这个行业普遍存在的三处软肋：意向订单与确认收入的边界、政府补贴的会计处理、核心技术人员的职务发明链条。</div>
+      </div>
+      <div class="deep-block">
+        <span class="deep-label">合规启示</span>
+        <ul class="deep-tips">
+          <li>拟IPO的机器人公司：把"订单"话术全面体检一遍，对外宣传口径与申报口径的差异现在就消除，别留给做空机构。</li>
+          <li>财务团队提前梳理政府补贴、场景示范项目收入的确认依据——这是本行业问询必到之处。</li>
+          <li>创始团队和核心工程师的前雇主竞业、职务发明确认书，在券商进场前补齐，进场后再补就是审核风险点。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <span class="sec-title">每日一识</span>
+      <span class="sec-sub">每天弄懂一个行业概念</span>
+    </div>
+    <div class="know-card">
+      <div class="know-term">智能体<span class="know-en">Agent / Embodied Agent</span></div>
+      <div class="know-body">今天政策里反复出现的"智能体"到底是什么？用打车做类比：<b>聊天大模型</b>像问路——你问它答，动手的还是你；<b>智能体（Agent）</b>像代驾——你说去哪，它自己规划路线、踩油门、避让行人，把事办完；而<b>具身智能体</b>，就是这位代驾不光会开车，还长了手脚能帮你搬行李上楼。技术上，智能体的标志是那五个词：<b>自主感知、记忆、决策、交互、执行</b>——少一个都只是工具，凑齐了才算"体"。这也解释了为什么监管突然升级：会"自己动手"的系统，出错的后果从"答错一道题"变成了"做错一件事"，而做错的事往往收不回来。</div>
+      <div class="know-hook">💡 法律勾连：三部门文件对智能体的五要素定义，未来很可能成为司法认定的起点——你的产品算不算智能体、落不落入备案义务，第一步就是拿这五个词逐项比对。给产品写宣传文案时也留个心眼："全自主决策"这种话说得越满，监管义务和事故责任就贴得越紧。</div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="card-line">
+      <div class="card-avatar">张</div>
+      <div>
+        <div class="card-name">张恒玮 律师</div>
+        <div class="card-info">企业与企业家法律风险防控 · 具身智能产业法律观察<br>电话/微信：195 3904 2084 ｜ 公众号：唯案唯客</div>
+      </div>
+    </div>
+    <div class="disclaim">
+      免责声明：本报告基于公开信息整理，仅供行业学习交流，不构成法律意见或投资建议；
+      具体法律问题请结合个案咨询专业律师。若内容涉及的事实信息与官方披露不一致，
+      以官方披露为准。
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
